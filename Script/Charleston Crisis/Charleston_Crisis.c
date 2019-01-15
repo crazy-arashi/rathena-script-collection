@@ -1,4 +1,12 @@
-//= Charleston Crisis :
+//===== rAthena Script ===========================================|
+//= Charleston in Distress			 		 =|
+//===== By: ======================================================|
+//= crazyarashi							 =|
+//===== Current Version: =========================================|
+//= 1.0 Initial Version                                          =|
+//================================================================|
+//= Charleston Crisis : Load up the Functions First              =|
+//================================================================|
 verus04,76,114,5	script	Charleston#charleston_crisis	4_F_CHARLESTON02,{
 cc_finish_check(.charleston_finish,.charleston_crisis);
 cc_cd_check(.charleston_cd,.charleston_crisis);
