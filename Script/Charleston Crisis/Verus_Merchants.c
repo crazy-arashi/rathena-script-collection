@@ -5,6 +5,7 @@
 //===== Current Version: =========================================|
 //= 1.0 Initial Version                                          =|
 //= 1.1 Script Clean-up                                          =|
+//= 1.2 Verus Enchants ( custom mes )                            =|            
 //================================================================|
 //= Verus Merchants / Verus Enchants                             =|
 //================================================================|
@@ -176,5 +177,282 @@ OnInit:
 	.component_id = 6752;
 	.price = 10;
 	setarray .item_list,20733,22044,2996,20732,22043,2995;
+	end;
+}
+
+verus04,71,106,4	script	Mass Charleston#verus_enchant	4_F_CHARLESTON01,{
+function required_check;
+disable_items;
+	mes "[ Mass Charleston ]";
+	mes "I can upgrade ^0000FFCharleston Factory Products^000000. Let me know if you're interested.";
+	next;
+	switch(select("More Information.:Add abilities to your product.:Reset product.")){
+		case 1:
+			mes "[ Mass Charleston ]";
+			mes "Each Upgrade/Reset cost ^0000FF100,000 Zeny^000000 and 1 <ITEM>Charleston Component.<INFO>"+.required_id+"</INFO></ITEM>^000000";
+			next;
+			mes "[ Mass Charleston ]";
+			mes "I also provide a wider selection of options for Charleston Equipment at ^FF0000+9^000000 or above.";
+			next;
+			mes "[ Mass Charleston ]";
+			mes "Rest assured. My upgrade technology does not involve accidental damage on the item's ^0000FFUpgrade Level^000000 or ^0000FFEquipped Cards.^000000";
+			close;
+		
+		case 2:
+			required_check(.required_id,.required_amount,.zeny_require);
+			mes "[ Mass Charleston ]";
+			mes "Please select what Charleston Equipment you want to add abilities to.";
+			next;
+			switch(select("Armor:Garments:Shoes:Accessory")){	
+				case 1:
+					.@charleston_id = getequipid(EQI_ARMOR);
+					@charleston_id = .@charleston_id;
+					switch(@charleston_id){
+						case 15110:
+							callsub Verus_Enchant,0,1,EQI_ARMOR;
+							end;
+							
+						case 15111:
+							callsub Verus_Enchant,1,1,EQI_ARMOR;
+							end;
+					}
+					break;
+					
+				case 2:
+					.@charleston_id = getequipid(EQI_GARMENT);
+					@charleston_id = .@charleston_id;
+					switch(@charleston_id){
+						case 20732:
+						case 20733:
+							callsub Verus_Enchant,2,1,EQI_GARMENT;
+							end;	
+					}
+					break;
+							
+				case 3:
+					.@charleston_id = getequipid(EQI_SHOES);
+					@charleston_id = .@charleston_id;
+					switch(@charleston_id){
+						case 22043:
+						case 22044:
+							callsub Verus_Enchant,3,1,EQI_SHOES;
+							end;
+						}
+						break;
+						
+				case 4:
+					.@charleston_id = getequipid(EQI_ACC_L);
+					@charleston_id = .@charleston_id;
+					switch(@charleston_id){
+						case 2995:
+						case 2996:
+							callsub Verus_Enchant,4,2,EQI_ACC_L;
+							end;
+						}
+						break;
+					
+					}
+			mes "[ Mass Charleston ]";
+			mes "You are not wearing a Charleston Product.";
+			mes "Please talk to me again when you wore it.";
+			end;
+			
+		case 3:
+			required_check(.required_id,.required_amount,.zeny_require);
+			mes "[ Mass Charleston ]";
+			mes "Please select what Charleston Equipment you want to add abilities to.";
+			next;
+			switch(select("Armor:Garments:Shoes:Accessory")){	
+				case 1:
+					callsub Verus_Reset,EQI_ARMOR;
+					end;
+				case 2:
+					callsub Verus_Reset,EQI_GARMENT;
+					end;
+				case 3:
+					callsub Verus_Reset,EQI_SHOES;
+					end;
+				case 4:
+					callsub Verus_Reset,EQI_ACC_L;
+					end;
+			}
+	}
+	
+Verus_Reset:
+	.@part = getarg(0);
+	.@equip_id = getequipid(.@part);
+	.@equip_refine = getequiprefinerycnt(.@part);
+	.@equip_name$ = getitemname(.@equip_id);
+	setarray .@equip_card[0], getequipcardid(.@part,0),getequipcardid(.@part,1),getequipcardid(.@part,2),getequipcardid(.@part,3);
+	
+	mes "[ Mass Charleston ]";
+	mes "*Beep* *Beep* Detecting Product Name:";
+	mes "^0000FF"+.@equip_name$+"^000000";
+	next;
+	mes "[ Mass Charleston ]";
+	mes "Are you sure you want to remove abilities of";
+	mes "^0000FF"+.@equip_name$+"^000000?";
+	next;
+	if(select("Yes:No") == 2){
+		mes "[ Mass Charleston ]";
+		mes "Come back again Dear Customer.";
+		close;
+	}
+	required_check(.required_id,.required_amount,.zeny_require);
+	if (!getequipisequiped(.@part)) {
+		mes "[ Mass Charleston ]";
+		mes "No Equipment Detected.";
+		close;
+	}
+	if (.@equip_card[3] == 0) {
+		mes "[ Mass Charleston ]";
+		mes "*Beep* *Beep* *Beep*.";
+		mes "No detected abilities to remove.";
+		close;
+	}
+	specialeffect2 EF_REPAIRWEAPON;
+	delitem .required_id,.required_amount;
+	Zeny -= .zeny_require;
+	for ( .@i = getiteminfo(.@equip_id,10); .@i < MAX_SLOTS; .@i++ ) {
+		if (callfunc("F_IsCharm",.@equip_card[.@i]) == true)
+			.@equip_card[.@i] = 0;
+	}
+	delequip .@part;
+	getitem2 .@equip_id,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
+	mes "[ Mass Charleston ]";
+	mes "Abilities successfully removed.";
+	end;
+	
+Verus_Enchant:
+	.@enchant_type = getarg(0);
+	.@max_slots = getarg(1);
+	.@part = getarg(2);
+	.@equip_id = getequipid(.@part);
+	.@equip_name$ = getitemname(.@equip_id);
+	.@equip_refine = getequiprefinerycnt(.@part);
+	setarray .@equip_card[0], getequipcardid(.@part,0),getequipcardid(.@part,1),getequipcardid(.@part,2),getequipcardid(.@part,3);
+
+	mes "[ Mass Charleston ]";
+	mes "*Beep* *Beep* Detecting Product Name:";
+	mes "^0000FF"+.@equip_name$+"^000000";
+	next;
+if (.@equip_card[3] == 0 && .@max_slots < 4) {
+	set .@slot,4;
+	mes "[ Mass Charleston ]";
+	mes "Adding abilities to First Part of Charleston Products. *beep* *beep*";
+	next;
+} else if (.@equip_card[2] == 0 && .@max_slots < 3) {
+	set .@slot,3;
+	mes "[ Mass Charleston ]";
+	mes "Adding abilities to Second Part of Charleston Products. *beep* *beep*";
+	next;
+} else if (.@equip_card[1] == 0 && .@max_slots < 2) {
+	set .@slot,2;
+	mes "[ Mass Charleston ]";
+	mes "Adding abilities to Third Part of Charleston Products. *beep* *beep*";
+	next;
+} else {
+	mes "[ Mass Charleston ]";
+	mes "This Product has already max abilities. *beep* *beep*.";
+	close;
+}
+if(select("Continue:Cancel") == 2){
+	mes "[ Mass Charleston ]";
+	mes "Come back again Dear Customer.";
+	close;	
+}
+switch(.@enchant_type){
+	case 0:
+		if(.@equip_refine >= 9){
+			mes "[ Mass Charleston ]";
+			mes "My system detects that your Armor Product is +9.";
+			mes "You may select the type of ability you want to add.";
+			next;
+			if(select("Speed:Defense") == 1){
+				setarray .@rand_enchant,4731,4732,4751,4752,4869,4872,4860,4762,4763;
+				break;
+				}
+			setarray .@rand_enchant,4741,4742,4861,4862,4867,4933,4934,4792,4793;
+			break;
+		}
+		setarray .@rand_enchant,4750,4751,4730,4731,4869,4872,4860,4762,4763;
+		break;
+		
+	case 1:
+		if(.@equip_refine >= 9){
+			mes "[ Mass Charleston ]";
+			mes "My system detects that your Armor Product is +9.";
+			mes "You may select the type of ability you want to add.";
+			next;
+			if(select("Speed:Attack") == 1){
+				setarray .@rand_enchant,4731,4732,4751,4752,4869,4872,4860,4762,4763;
+				break;
+			}
+			setarray .@rand_enchant,4701,4702,4721,4722,4809,4810,4832,4833,4834;
+			break;
+		}
+		setarray .@rand_enchant,4750,4751,4730,4731,4869,4872,4860,4762,4763;
+		break;
+		
+	case 2:
+		if(.@equip_refine >= 9){
+			setarray .@rand_enchant,4701,4702,4711,4712,4721,4722,4731,4732,4741,4742,4751,4752,4832,4833,4834;
+			break;
+		}
+		setarray .@rand_enchant,4700,4701,4710,4711,4720,4721,4730,4731,4740,4741,4750,4751,4832;
+		break;
+		
+	case 3:
+		if(.@equip_refine >= 9){
+			setarray .@rand_enchant,4701,4702,4721,4722,4731,4732,4741,4742,4814,4815,4869,4872;
+			break;
+		}
+		setarray .@rand_enchant,4700,4701,4720,4721,4730,4731,4740,4741,4815,4869;
+		break;
+	
+	case 4:
+		setarray .@rand_enchant,4700,4701,4710,4711,4720,4721,4730,4731,4740,4741,4815,4869;
+		break;
+		
+	default:
+		mes " - Error -";
+		mes "Report to the GM";
+		close;
+}
+for (.@i = 0; .@i < 1; .@i++)
+.@index = rand(getarraysize(.@rand_enchant));
+     if (.@equip_card[3] == 0 && .@max_slots < 4) set .@equip_card[3],.@rand_enchant[.@index];
+else if (.@equip_card[2] == 0 && .@max_slots < 3) set .@equip_card[2],.@rand_enchant[.@index];
+else if (.@equip_card[1] == 0 && .@max_slots < 2) set .@equip_card[1],.@rand_enchant[.@index];
+else if (.@equip_card[0] == 0 && .@max_slots < 1) set .@equip_card[0],.@rand_enchant[.@index];
+else {
+	mes "[ Mass Charleston ]";
+	mes "This equipment is already at its limit.";
+	close;
+}
+
+required_check(.required_id,.required_amount,.zeny_require);
+delitem .required_id,.required_amount;
+Zeny -= .zeny_require;
+delequip .@part;
+specialeffect2 EF_REPAIRWEAPON;
+mes "[ Mass Charleston ]";
+mes "I've successfully added an ability to your product in Socket "+.@slot+"";
+getitem2 .@equip_id,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
+end;
+
+function	required_check	{
+	if(countitem(getarg(0)) < getarg(1) || Zeny < getarg(2)){
+	mes "[ Mass Charleston ]";
+	mes "Resetting a Charleston Product costs 1 <ITEM>Charleston Component<INFO>"+getarg(0)+"</INFO></ITEM>^000000 and ^0000FF"+getarg(2)+" Zeny.^000000 Please know that all the expenses go into resetting your Charleston Product.";
+	close;
+	}
+	return;
+}
+
+OnInit:
+	.required_id = 6752;
+	.required_amount = 1;
+	.zeny_require = 100000;
 	end;
 }
