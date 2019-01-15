@@ -1,11 +1,11 @@
 //===== rAthena Script ===========================================|
-//= Poring Catcher ( crazyarashi version )			     		 =|
+//= Poring Catcher ( crazyarashi version )			 =|
 //===== By: ======================================================|
-//= crazyarashi													 =|
+//= crazyarashi                                                  =|
 //===== Current Version: =========================================|
-//= 1.0 Initial Version											 =|
+//= 1.0 Initial Version                                          =|
 //================================================================|
-//= Poring Catcher							 					 =|
+//= Poring Catcher                                               =|
 //================================================================|
 -	script	Poring_Catcher	-1,{	
 OnInit:
