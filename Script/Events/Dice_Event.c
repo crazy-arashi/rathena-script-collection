@@ -1,11 +1,11 @@
 //===== rAthena Script ===========================================|
-//= Dice Event ( crazyarashi version )			     		 	 =|
+//= Dice Event ( crazyarashi version )			     	 =|
 //===== By: ======================================================|
-//= crazyarashi													 =|
+//= crazyarashi							 =|
 //===== Current Version: =========================================|
-//= 1.0 Initial Version											 =|
+//= 1.0 Initial Version						 =|
 //================================================================|
-//= Dice Event							 					 	 =|
+//= Dice Event							 =|
 //================================================================|
 -	script	Dice_Event	-1,{
 OnInit:
