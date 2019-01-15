@@ -64,7 +64,7 @@ verus04,63,112,3	script	Mass Charleston#exchanger	4_F_CHARLESTON01,{
 			.@s = ( select(.@menu$) - 1 * 2);
 			mes "[ ^0000FFMass Charleston^000000 ]";
 			mes "Do you really want to buy?";
-			mes "<ITEM>" +getitemname(.bunker_data$[.@s])+ "<INFO>"+atoi(.bunker_data$[.@s+1])+"</INFO></ITEM>";
+			mes "<ITEM>" +.bunker_data$[.@s]+ "<INFO>"+atoi(.bunker_data$[.@s+1])+"</INFO></ITEM>";
 			next;
 			if(select("I suggest you reconsider.:Buy it.") == 1){
 				mes "[ ^0000FFMass Charleston^000000 ]";
