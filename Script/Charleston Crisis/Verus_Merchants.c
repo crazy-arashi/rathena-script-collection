@@ -1,9 +1,10 @@
 //===== rAthena Script ===========================================|
-//= Verus Merchants [ Charleston Extension ]			 =|
+//= Verus Merchants [ Charleston Extension ]                     =|
 //===== By: ======================================================|
-//= crazyarashi							 =|
+//= crazyarashi                                                  =|
 //===== Current Version: =========================================|
 //= 1.0 Initial Version                                          =|
+//= 1.1 Script Clean-up                                          =|
 //================================================================|
 //= Verus Merchants / Verus Enchants                             =|
 //================================================================|
@@ -24,7 +25,7 @@ verus04,63,112,3	script	Mass Charleston#exchanger	4_F_CHARLESTON01,{
 	next;
 	cutin "dalle01.bmp",2;
 	mes "[ ^0000FFMass Charleston^000000 ]";
-	mes "Charleston Factory's best-selling items : <ITEM>" +getitemname(15111)+ "<INFO>" +15111+"</INFO></ITEM> and <ITEM>" +getitemname(15110)+ "<INFO>" +15110+"</INFO></ITEM> now on sale!";
+	mes "Charleston Factory's best-selling items : <ITEM>"+getitemname(15111)+"<INFO>"+15111+"</INFO></ITEM> and <ITEM>"+getitemname(15110)+"<INFO>"+15110+"</INFO></ITEM> now on sale!";
 	next;
 	mes "[ ^0000FFMass Charleston^000000 ]";
 	mes "For only 3,999,999 Zeny! Get yourself some ultra-preformance action gears!";
@@ -57,45 +58,42 @@ verus04,63,112,3	script	Mass Charleston#exchanger	4_F_CHARLESTON01,{
 			mes "To upgrade a Pile Bunker:";
 			mes "^FF00001 Pile Bunker^0000FF,^FF0000300 Dented Iron Plates^000000, and ^FF000015 Broken Engines^000000 are required.";
 			next;
-			.@size = getarraysize(.bunker$);
-			for(.@i = 0; .@i < .@size; .@i++){
-				.@menu$ += .bunker$[.@i] + ":";
+			for(.@i = 0; .@i < getarraysize(.bunker_data$); .@i += 2){
+				.@menu$ += .bunker_data$[.@i] + ":";
 			}
-			.@s = ( select(.@menu$) - 1 );
+			.@s = ( select(.@menu$) - 1 * 2);
 			mes "[ ^0000FFMass Charleston^000000 ]";
 			mes "Do you really want to buy?";
-			mes "<ITEM>" +getitemname(.bunker_id[.@s])+ "<INFO>"+.bunker_id[.@s]+"</INFO></ITEM>";
+			mes "<ITEM>" +getitemname(.bunker_data$[.@s])+ "<INFO>"+atoi(.bunker_data$[.@s+1])+"</INFO></ITEM>";
 			next;
 			if(select("I suggest you reconsider.:Buy it.") == 1){
 				mes "[ ^0000FFMass Charleston^000000 ]";
 				mes "It's a good buy, but you still need to make your decision carefully.";
 				close3;
 			}
-			for ( .@k = 0; .@k < getarraysize(.bunker_need); .@k++){
-				if(countitem(.bunker_need[.@k]) >= .bunker_count[.@k])	{		
-					.@missing$ = "^0000FF" + getitemname(.bunker_need[.@k]) + "^000000" + " - " + "[" + "^00FF00"+countitem(.bunker_need[.@k])+"^000000" + "/" + "^00FF00"+.bunker_count[.@k]+"^000000" + "]";
+			mes "[ ^0000FFMass Charleston^000000 ]";
+			for(.@i = 0; .@i < getarraysize(.bunker_requirement); .@i += 2){
+				if(countitem(.bunker_requirement[.@i]) >= .bunker_requirement[.@i+1]){
+					mes "^0000FF" + getitemname(.bunker_requirement[.@i]) + "^000000" + " - " + "[" + "^00FF00"+countitem(.bunker_requirement[.@i])+"^000000" + "/" + "^00FF00"+.bunker_requirement[.@i+1]+"^000000" + "]";
 				} else {
-					.@missing$ = "^0000FF" + getitemname(.bunker_need[.@k]) + "^000000" + " - " + "[" + "^FF0000"+countitem(.bunker_need[.@k])+"^000000" + "/" + "^FF0000"+.bunker_count[.@k]+"^000000" + "]";
-					.@miss++;
+					mes "^0000FF" + getitemname(.bunker_requirement[.@i]) + "^000000" + " - " + "[" + "^FF0000"+countitem(.bunker_requirement[.@i])+"^000000" + "/" + "^FF0000"+.bunker_requirement[.@i+1]+"^000000" + "]";
+					.@miss++
 				}
-				.@item$[.@k] = .@missing$;
 			}
-			if (.@miss > 0) {
+			next;
+			if(.@miss > 0){
 				mes "[ ^0000FFMass Charleston^000000 ]";
 				mes "Not enough materials for the Upgrade.";
-				for(.@j = 0; .@j < 3; .@j++){
-					mes .@item$[.@j];
-				}
 				close3;
 			}
-			for ( .@i = 0; .@i < getarraysize(.bunker_need); .@i++ ){
-				delitem .bunker_need[.@i],.bunker_count[.@i];
+			for ( .@i = 0; .@i < getarraysize(.bunker_requirement); .@i++ ){
+				delitem .bunker_requirement[.@i],.bunker_requirement[.@i+1];
 			}
 			progressbar "ffff00",5;
 			specialeffect2 EF_REPAIRWEAPON;
 			mes "[ ^0000FFMass Charleston^000000 ]";
 			mes "Thank you for you transaction.";
-			getitem .bunker_id[.@s],1;
+			getitem atoi(.bunker_data$[.@s]),1;
 			close3;		
 	}
 	mes "[ ^0000FFMass Charleston^000000 ]";
@@ -124,10 +122,11 @@ verus04,63,112,3	script	Mass Charleston#exchanger	4_F_CHARLESTON01,{
 			
 OnInit:
 	.item_price = 3999999;
-	setarray .bunker$,"Pile Bunker S","Pile Bunker P","Pile Bunker T";
-	setarray .bunker_id,16030,16031,16032;
-	setarray .bunker_need,1549,6751,6750;	
-	setarray .bunker_count,1,300,15;
+	setarray .bunker_data$,
+	"Pile Bunker S",16030,
+	"Pile Bunker P",16031,
+	"Pile Bunker T",16032;
+	setarray .bunker_requirement,1549,1,6751,300,6750,15;
 	end;
 }
 
@@ -143,8 +142,8 @@ verus04,69,108,5	script	Mass Charleston#exchanger_2	4_F_CHARLESTON01,{
 	disable_items;
 	cutin "dalle03.bmp",2;
 	mes "[ ^0000FFMass Charleston^000000 ]";
-	mes "I can exchange ^0000FF10^000000 of your <ITEM>Charleston Component<INFO>6752</INFO></ITEM> for factory products.";
-	if(countitem(6752) < 10){
+	mes "I can exchange ^0000FF"+.price+"^000000 of your <ITEM>"+getitemname(.component_id)+"<INFO>"+.component_id+"</INFO></ITEM> for factory products.";
+	if(countitem(.component_id) < 10){
 		close3;
 	}
 	next;
@@ -162,18 +161,20 @@ verus04,69,108,5	script	Mass Charleston#exchanger_2	4_F_CHARLESTON01,{
 	if(select("No:Yes") == 1){
 		close3;
 	}
-	if(countitem(6752) < 10){
+	if(countitem(.component_id) < 10){
 		mes "[ ^0000FFMass Charleston^000000 ]";
 		mes "You don't have enough Charleston Components.";
 		end;
 	}
 	mes "[ ^0000FFMass Charleston^000000 ]";
 	mes "Thank you and enjoy your purchase.";
-	delitem 6752,10;
+	delitem .component_id,.price;
 	getitem .item_list[.@s],1;
 	close3;
 	
 OnInit:
+	.component_id = 6752;
+	.price = 10;
 	setarray .item_list,20733,22044,2996,20732,22043,2995;
 	end;
 }
