@@ -1,7 +1,7 @@
 //===== rAthena Script ===========================================|
-//= Verus Merchants [ Charleston Extension ]					 =|
+//= Verus Merchants [ Charleston Extension ]			 =|
 //===== By: ======================================================|
-//= crazyarashi													 =|
+//= crazyarashi							 =|
 //===== Current Version: =========================================|
 //= 1.0 Initial Version                                          =|
 //================================================================|
