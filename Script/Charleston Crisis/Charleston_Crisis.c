@@ -77,7 +77,6 @@ verus04,81,112,4	script	Dimensional Device#charleston	10007,{
 					mes "^ff0000Your party leader has not yet created a Time Crack.^000000";
 					break;
 				case 0:
-					instance_addtimer("CharlestonCrisis",72000);
 					setquest .charleston_cd;
 					mapannounce "verus04", strcharinfo(0) + " of the party, "+ .@party_name$ +", is entering the " + .@md_name$ + ".", bc_map, "0x00ff99";
 					break;

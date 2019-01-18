@@ -1,3 +1,29 @@
+function	script	instance_hide	{
+.@arg = getarg(1);
+	switch(.@arg){
+		case 1:
+			hideonnpc instance_npcname(getarg(0));
+			return;
+			
+		case 2:
+			hideoffnpc instance_npcname(getarg(0));
+			return;
+			
+		case 3:
+			disablenpc instance_npcname(getarg(0));
+			return;
+			
+		case 4:
+			enablenpc instance_npcname(getarg(0));
+			return;
+			
+		case 5:
+			hideonnpc instance_npcname(getarg(0));
+			disablenpc instance_npcname(getarg(0));
+			return;
+	}
+}
+
 function	script	charleston_check	{
 	.@initial_quest = checkquest(getarg(1));	
 	if(BaseLevel < getarg(0)){
