@@ -78,7 +78,7 @@ verus04,63,112,3	script	Mass Charleston#exchanger	4_F_CHARLESTON01,{
 					mes "^0000FF" + getitemname(.bunker_requirement[.@i]) + "^000000" + " - " + "[" + "^00FF00"+countitem(.bunker_requirement[.@i])+"^000000" + "/" + "^00FF00"+.bunker_requirement[.@i+1]+"^000000" + "]";
 				} else {
 					mes "^0000FF" + getitemname(.bunker_requirement[.@i]) + "^000000" + " - " + "[" + "^FF0000"+countitem(.bunker_requirement[.@i])+"^000000" + "/" + "^FF0000"+.bunker_requirement[.@i+1]+"^000000" + "]";
-					.@miss++
+					.@miss++;
 				}
 			}
 			next;
