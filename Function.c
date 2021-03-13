@@ -78,6 +78,22 @@ function	script	instance_effect	{
 	return;
 }
 
+//= Lazy version of cloakon/off
+function	script	cloaknpc	{
+	if(getargcount() > 2){
+		if(getarg(1))
+			cloakonnpc getarg(0),getarg(2);
+		else
+			cloakoffnpc getarg(0),getarg(2);
+	} else {
+		if(getarg(1))
+			cloakonnpc getarg(0);
+		else
+			cloakoffnpc getarg(0);
+	}
+	return;
+}
+
 //= Duplicate for dummy cloaked npc
 -	script	dummynpc	-1,{
 	end;
