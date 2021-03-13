@@ -7,3 +7,5 @@ Feel free to modify it and release it with my credits of course.
 Just keep my credits and I have no problem with it.
 
 You may not resell it or redistribute it with your name. 
+
+Always load the functions first.
