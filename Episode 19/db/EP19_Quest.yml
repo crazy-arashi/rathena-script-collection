@@ -1,0 +1,706 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Quest Database
+###########################################################################
+#
+# Quest Settings
+#
+###########################################################################
+# - Id              Quest ID.
+#   Title           Quest title.
+#   TimeLimit       Amount of time before the quest expires. (Default: 0)
+#                   Use a number following by "d" for day(s), "h" for hour(s), "mn" for minute(s), and "s" for second(s).
+#                   Specify with "+" for how long until the quest expires.
+#                   Specify without "+" for the exact time the quest expires using "d" (optional), [0-23]"h" (required), [0-59]"mn" (optional), [0-59]"s" (optional) format.
+#                   Please note the number before "d" only shift the exact timer to the given day(s).
+#   Targets:        Quest objective target. (Default: null)
+#                   The target can be a couple of node Mob/Count or of Id/Race/Size/Element/MinLevel/MaxLevel.
+#                   If Mob is supplied, Count is required and the other fields are ignored.
+#                   If Id is supplied, at least one other field of Race/Size/Element/MinLevel/MaxLevel is required.
+#                   If Id is supplied, Count is required for each new entry.
+#     - Mob         Monster to kill (aegis monster name).
+#       Count       Amount of monsters to kill. Set to 0 to skip the target on import.
+#       Id          Unique target index for the quest Id. Requires a positive number.
+#       Race        Monster race target (default All). Valid races are Angel, Brute, DemiHuman, Demon, Dragon, Fish, Formless, Insect, Plant, Undead, All.
+#       Size        Monster size target (default All). Valid sizes are Small, Medium, Large, All.
+#       Element     Monster element target (default All). Valid elements are Dark, Earth, Fire, Ghost, Holy, Neutral, Poison, Undead, Water, Wind, All.
+#       MinLevel    Minimum monster level target. If not supplied but MaxLevel defined, MinLevel is 1. Set to 0 to ignore MinLevel on import. (Default: 0)
+#       MaxLevel    Maximum monster level target. Set to 0 to ignore MaxLevel on import. (Default: 0)
+#       Location    Map name where kills are counted. (Default any location)
+#                   On normal maps only kills of permanently spawned monsters increase the counter.
+#                   On instance maps all monster kills increase the counter.
+#       MapName     Displayed map name in quest UI. (Default: empty string)
+#   Drops:          Quest item drop targets. (Default: null)
+#     - Mob         Monster to kill. 0 will apply to all monsters. (Default: 0)
+#       Item        Item to drop.
+#       Count       Amount of items that will drop. Non-stackable items default to 1. (Default: 1)
+#       Rate        Item drop rate. (10000 = 100%)
+###########################################################################
+
+Header:
+  Type: QUEST_DB
+  Version: 2
+
+Body:
+  - Id: 5972
+    Title: Eagle Patrol
+  - Id: 5973
+    Title: Eagle Patrol - Wait
+    TimeLimit: 4h
+  - Id: 5974
+    Title: Patrol with Iwin(1)
+  - Id: 5975
+    Title: Patrol with Iwin(2)
+  - Id: 5976
+    Title: Supplier Goril
+  - Id: 5977
+    Title: Do Not Feed - Wait
+    TimeLimit: 4h
+  - Id: 5978
+    Title: Do Not Feed(1)
+  - Id: 5979
+    Title: Do Not Feed(2)
+  - Id: 5980
+    Title: Secret Interest
+  - Id: 5981
+    Title: Secret Interest - Wait
+    TimeLimit: 4h
+  - Id: 5982
+    Title: Secret Interest
+  - Id: 5983
+    Title: Experiment 210426 Encounter
+  - Id: 5984
+    Title: Rgan Transformation Scroll
+  - Id: 5985
+    Title: Lunch's Menu Selection - Wait
+    TimeLimit: 4h
+  - Id: 5986
+    Title: Lunch's Menu Selection
+  - Id: 5987
+    Title: Lunch's Menu Selection
+  - Id: 5988
+    Title: Lunch's Menu Selection
+  - Id: 5989
+    Title: Lunch's Menu Selection
+  - Id: 5990
+    Title: Lunch's Menu Selection
+  - Id: 5991
+    Title: Lunch's Menu Selection
+  - Id: 5992
+    Title: Lunch's Menu Selection
+  - Id: 5993
+    Title: Lunch's Menu Selection
+  - Id: 5994
+    Title: Lunch's Menu Selection
+  - Id: 5995
+    Title: Lunch's Menu Selection
+  - Id: 8784
+    Title: Helping Moryara Fish
+    Targets:
+      - Mob: EP19_SHINING_SEAWEED
+        Count: 20
+  - Id: 8785
+    Title: Helping Moryara Fish - Wait
+    TimeLimit: 4h
+  - Id: 8786
+    Title: Helping Moryara Fish
+    Targets:
+      - Mob: EP19_SHINING_SEAWEED
+        Count: 20
+  - Id: 8787
+    Title: Happy Lunch With Zoryara
+  - Id: 8788
+    Title: Happy Lunch With Zoryara - Wait
+    TimeLimit: 4h
+  - Id: 8789
+    Title: Happy Lunch With Zoryara
+  - Id: 8790
+    Title: Priest, Have Mercy?
+  - Id: 8791
+    Title: Priest, Have Mercy? - Wait
+    TimeLimit: 4h
+  - Id: 8792
+    Title: Priest, Have Mercy??
+  - Id: 8793
+    Title: Your Question
+  - Id: 8794
+    Title: Old Snake
+  - Id: 8795
+    Title: Doctrine and Teachings
+  - Id: 8796
+    Title: Never Seen Before
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 20
+  - Id: 8797
+    Title: Rgan's Work - Wait
+    TimeLimit: 4h
+  - Id: 8798
+    Title: Rgan's Work
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 20
+  - Id: 8799
+    Title: Rgan of the Hatchery(1)
+  - Id: 8800
+    Title: Rgan of the Hatchery(2)
+  - Id: 8801
+    Title: Rgan of the Hatchery(3)
+  - Id: 8802
+    Title: 1st Rgan of the Hatchery
+  - Id: 8803
+    Title: 2nd Rgan of the Hatchery
+  - Id: 8804
+    Title: 3rd Rgan of the Hatchery
+  - Id: 11794
+    Title: Saintess Purification
+  - Id: 11795
+    Title: Saintess Purification
+  - Id: 11796
+    Title: Saintess Purification
+  - Id: 11797
+    Title: Saintess Purification
+  - Id: 11798
+    Title: Saintess Purification
+  - Id: 11799
+    Title: Saintess Purification
+  - Id: 11800
+    Title: Saintess Purification
+  - Id: 11801
+    Title: Saintess Purification
+  - Id: 11802
+    Title: Saintess Purification
+  - Id: 11803
+    Title: Saintess Purification
+  - Id: 11804
+    Title: Saintess Purification
+  - Id: 11805
+    Title: Saintess Purification
+  - Id: 11806
+    Title: Saintess Purification
+  - Id: 11807
+    Title: Saintess Purification
+  - Id: 11808
+    Title: Saintess Purification
+  - Id: 11809
+    Title: Saintess Purification
+  - Id: 11810
+    Title: Saintess Purification
+  - Id: 11811
+    Title: Saintess Purification
+  - Id: 11812
+    Title: Friederike's Day
+  - Id: 11813
+    Title: Friederike's Day
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 10
+      - Mob: EP19_RGAN_B
+        Count: 10
+    Drops:
+      - Mob: EP19_RGAN_A
+        Item: Ep19_Rgan_Core
+        Rate: 5000
+      - Mob: EP19_RGAN_B
+        Item: Ep19_Rgan_Core
+        Rate: 5000
+  - Id: 11814
+    Title: Friederike's Day - Wait
+    TimeLimit: 4h
+  - Id: 11815
+    Title: Frozen Sea
+  - Id: 11816
+    Title: Frozen Sea
+  - Id: 11817
+    Title: Frozen Sea
+  - Id: 11818
+    Title: Frozen Sea
+  - Id: 11819
+    Title: Frozen Sea
+  - Id: 11820
+    Title: Frozen Sea
+  - Id: 11821
+    Title: Frozen Sea
+  - Id: 11822
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 20
+        Location: jor_back2
+        MapName: Frozen Scale Plain
+    Drops:
+      - Mob: EP19_ICE_GANGU
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ICE_STRAW
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_UNFROST_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_LIMACINA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11823
+    Title: Frozen Sea
+  - Id: 11824
+    Title: Frozen Sea
+  - Id: 11825
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab01
+        MapName: Abandoned Pit 1st Floor
+    Drops:
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11826
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab01
+        MapName: Abandoned Pit 1st Floor
+    Drops:
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11827
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab01
+        MapName: Abandoned Pit 1st Floor
+    Drops:
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11828
+    Title: Frozen Sea
+    Targets:
+      - Id: 1
+        Count: 5
+        Location: jor_ab02
+        MapName: Abandoned Pit 2nd Floor
+    Drops:
+      - Mob: EP19_ONE_EYE_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ET_RGAN_D
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_WASTED_RGAN_C
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11829
+    Title: Frozen Sea
+  - Id: 11830
+    Title: Abandoned Pit
+  - Id: 11831
+    Title: Abandoned Places(1)
+    Targets:
+      - Id: 1
+        Count: 40
+        Location: jor_ab01
+        MapName: Abandoned Pit 1st Floor
+    Drops:
+      - Mob: EP19_CAVE_CALMARING
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_CAVE_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_WASTED_RGAN_A
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA_BABY
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_RE_RGAN_E
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11832
+    Title: Abandoned Places(1) - Wait
+    TimeLimit: 4h
+  - Id: 11833
+    Title: Abandoned Places(2)
+    Targets:
+      - Id: 1
+        Count: 40
+        Location: jor_ab02
+        MapName: Abandoned Pit 2nd Floor
+    Drops:
+      - Mob: EP19_ONE_EYE_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_HALLUCIGENIA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ET_RGAN_D
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_WASTED_RGAN_C
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_DOLLOCARIS
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11834
+    Title: Abandoned Places(2) - Wait
+    TimeLimit: 4h
+  - Id: 11835
+    Title: Dig and Dig
+  - Id: 11836
+    Title: Dig and Dig
+  - Id: 11837
+    Title: Dig and Dig
+  - Id: 11838
+    Title: Dig and Dig
+  - Id: 11839
+    Title: Dig and Dig
+  - Id: 11840
+    Title: Dig and Dig
+  - Id: 11841
+    Title: Dig and Dig
+  - Id: 11842
+    Title: Dig and Dig
+  - Id: 11843
+    Title: Dig and Dig
+  - Id: 11844
+    Title: Dig and Dig
+  - Id: 11845
+    Title: Dig and Dig
+  - Id: 11846
+    Title: Dig and Dig
+  - Id: 11847
+    Title: Dig and Dig
+  - Id: 11848
+    Title: Dig and Dig
+  - Id: 11849
+    Title: Dig and Dig
+  - Id: 11850
+    Title: Dig and Dig - Wait
+    TimeLimit: 4h
+  - Id: 11851
+    Title: Refrigerator's Necessities
+  - Id: 11852
+    Title: Refrigerator's Necessities
+    Targets:
+      - Id: 1
+        Count: 20
+        Location: jor_back2
+        MapName: Frozen Scale Plain
+    Drops:
+      - Mob: EP19_ICE_GANGU
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_ICE_STRAW
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_UNFROST_FLOWER
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+      - Mob: EP19_LIMACINA
+        Item: Ep19_Ice_Meat
+        Rate: 5000
+  - Id: 11853
+    Title: Refrigerator's Necessities - Wait
+    TimeLimit: 4h
+  - Id: 11854
+    Title: Crisped Tools
+  - Id: 11855
+    Title: Crisped Tools
+  - Id: 11856
+    Title: Crisped Tools
+  - Id: 11857
+    Title: Crisped Tools
+  - Id: 11858
+    Title: Crisped Tools
+  - Id: 11859
+    Title: Crisped Tools - Wait
+    TimeLimit: 4h
+  - Id: 12560
+    Title: Airship Sabotage - Wait
+    TimeLimit: +3d
+  - Id: 12561
+    Title: Core Disabling
+    Targets:
+      - Mob: EP19_MD_AQUILA
+        Count: 1
+  - Id: 16636
+    Title: Finding Clues - Juncea's Laboratory
+  - Id: 16637
+    Title: Finding Clues - Bagot's Laboratory
+  - Id: 16638
+    Title: Finding Clues - Rgan Guards
+  - Id: 16639
+    Title: Juncea's Laboratory
+  - Id: 16640
+    Title: Juncea's Laboratory
+  - Id: 16641
+    Title: Bagot's Laboratory
+  - Id: 16642
+    Title: Bagot's Laboratory
+  - Id: 16643
+    Title: Rgan Guard
+  - Id: 16644
+    Title: Rgan Guard
+  - Id: 16645
+    Title: Sharing Clues
+  - Id: 16646
+    Title: Silent Infiltration
+  - Id: 16647
+    Title: Silent Infiltration
+  - Id: 16648
+    Title: Silent Infiltration
+  - Id: 16649
+    Title: Silent Infiltration
+  - Id: 16650
+    Title: Silent Infiltration
+  - Id: 16651
+    Title: Silent Infiltration
+  - Id: 16652
+    Title: Silent Infiltration    
+  - Id: 16653
+    Title: Accumulating Doubts 
+  - Id: 16654
+    Title: Accumulating Doubts 
+  - Id: 16655
+    Title: Slight Difference
+  - Id: 16656
+    Title: Slight Difference
+  - Id: 16657
+    Title: Slight Difference
+  - Id: 16658
+    Title: Slight Difference
+  - Id: 16659
+    Title: Slight Difference
+  - Id: 16660
+    Title: Slight Difference
+  - Id: 16661
+    Title: Slight Difference
+  - Id: 16662
+    Title: Battle Simulation
+    Targets:
+      - Mob: EP19_MD_JUNCEA_S
+        Count: 1
+  - Id: 16663
+    Title: Battle Simulation - Wait
+    TimeLimit: 4h
+  - Id: 17619
+    Title: Lazy's Plan
+  - Id: 17620
+    Title: Snake Nest Infiltration
+  - Id: 17621
+    Title: Snake Nest Infiltration
+  - Id: 17622
+    Title: Snake Nest Infiltration
+  - Id: 17623
+    Title: Snake Nest Infiltration
+  - Id: 17624
+    Title: Snake Nest Infiltration
+  - Id: 17625
+    Title: Snake Nest Infiltration
+  - Id: 17626
+    Title: Snake Nest Infiltration
+  - Id: 17627
+    Title: Snake Nest Infiltration
+  - Id: 17628
+    Title: Snake Nest Infiltration
+  - Id: 17629
+    Title: Snake Nest Infiltration
+  - Id: 17630
+    Title: Snake Nest Infiltration
+  - Id: 17631
+    Title: Snake Nest Infiltration
+  - Id: 17632
+    Title: Infiltration Report
+  - Id: 17633
+    Title: Infiltration Report
+  - Id: 17634
+    Title: Infiltration Report
+  - Id: 17635
+    Title: Infiltration Report
+  - Id: 17636
+    Title: Infiltration Report
+  - Id: 17637
+    Title: Airship Sabotage Operation
+  - Id: 17638
+    Title: Investigating Vulnerabilities
+  - Id: 17639
+    Title: Reconnaissance Report
+  - Id: 17640
+    Title: Chaotic Snake Nest
+  - Id: 17641
+    Title: Chaotic Snake Nest
+  - Id: 17642
+    Title: Chaotic Snake Nest
+  - Id: 17643
+    Title: Chaotic Snake Nest
+  - Id: 17644
+    Title: Chaotic Snake Nest
+  - Id: 17645
+    Title: Chaotic Snake Nest
+  - Id: 17646
+    Title: Chaotic Snake Nest
+  - Id: 17647
+    Title: Chaotic Snake Nest
+  - Id: 17648
+    Title: Chaotic Snake Nest
+  - Id: 17649
+    Title: Those Who Vanished
+  - Id: 17650
+    Title: Underground Entrance Search
+  - Id: 17651
+    Title: Underground Entrance Search
+  - Id: 17652
+    Title: Underground Entrance Search
+  - Id: 17653
+    Title: Underground Entrance Search
+  - Id: 17654
+    Title: Underground Entrance Search
+  - Id: 17655
+    Title: Underground Entrance Search
+  - Id: 17656
+    Title: Underground Entrance Search
+  - Id: 17657
+    Title: Underground Entrance Search
+  - Id: 17658
+    Title: Underground Entrance Search
+  - Id: 17659
+    Title: Underground Entrance Search
+  - Id: 17660
+    Title: Underground Entrance Search
+  - Id: 17661
+    Title: Underground Entrance Search - Complete
+  - Id: 17662
+    Title: Underground Entrance Search - Wait
+    TimeLimit: 4h
+  - Id: 18119
+    Title: Visitor on the North Wind 1
+  - Id: 18120
+    Title: Visitor on the North Wind 2
+  - Id: 18121
+    Title: Guardian Box and Invitation 1
+  - Id: 18122
+    Title: Guardian Box and Invitation 2
+  - Id: 18123
+    Title: Guardian Box and Invitation 3
+  - Id: 18124
+    Title: Guardian Box and Invitation 5
+  - Id: 18125
+    Title: Into the Ice Castle
+  - Id: 18126
+    Title: Encounter in the Ice Castle
+  - Id: 18127
+    Title: Meet the Iwin Scout
+  - Id: 18128
+    Title: Meet Voglinde
+  - Id: 18129
+    Title: Guardian Box and Invitation 4
+  - Id: 18130
+    Title: Research Materials Procurement For Vellgunde
+  - Id: 18131
+    Title: Research Materials Procurement For Vellgunde - Wait
+    TimeLimit: 4h
+  - Id: 18132
+    Title: In Need of Help
+  - Id: 18133
+    Title: Leon's Story
+  - Id: 18134
+    Title: Search for Survivors - Frozen Glacier
+  - Id: 18135
+    Title: Search for Survivors - Frozen Plains
+  - Id: 18136
+    Title: Rescue Completed
+  - Id: 18137
+    Title: Search for Survivors - Wait
+    TimeLimit: 4h
+  - Id: 18138
+    Title: Special Way of Survival
+    Targets:
+      - Mob: EP19_RGAN_A
+        Count: 10
+      - Mob: EP19_RGAN_B
+        Count: 10
+  - Id: 18139
+    Title: Our Precious Food
+  - Id: 18140
+    Title: Our Precious Food - Wait
+    TimeLimit: 4h
+  - Id: 18141
+    Title: Elegant Hobby
+  - Id: 18142
+    Title: Elegant Hobby - Wait
+    TimeLimit: 4h
+  - Id: 18143
+    Title: Labor's Safety
+    Targets:
+      - Mob: EP19_LIMACINA
+        Count: 20
+      - Mob: EP19_CALMARING
+        Count: 20
+  - Id: 18144
+    Title: Labor's Safety - Wait
+    TimeLimit: 4h

@@ -1,0 +1,159 @@
+  - Name: remorse_item
+    Items:
+      - Index: 0
+        Item: Sakray_Fury
+        Zeny: 100000
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 50
+      - Index: 1
+        Item: Sakray_Regret
+        Zeny: 100000
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 50
+      - Index: 1
+        Item: Sakray_Fury2
+        Zeny: 150000
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 250
+      - Index: 2
+        Item: Sakray_Regret2
+        Zeny: 150000
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 250
+            
+  - Name: remorse_weapon
+    Items:
+      - Index: 0
+        Item: Poenitentia_Ensis
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700
+      - Index: 1
+        Item: Poenitentia_Catapulta
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700
+      - Index: 2
+        Item: Poenetentia_Box1
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 3
+        Item: Poenetentia_Box2
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700  
+      - Index: 4
+        Item: Poenitentia_Catapulta
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700            
+      - Index: 5
+        Item: Poenitentia_Ascia
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700           
+      - Index: 6
+        Item: Poenitentia_Clava
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700      
+      - Index: 7
+        Item: Poenitentia_Pendulus
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 8
+        Item: Poenitentia_Ligula
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700  
+      - Index: 9
+        Item: Poenitentia_Termes
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700    
+      - Index: 10
+        Item: Poenitentia_Virga
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700                
+      - Index: 11
+        Item: Poenitentia_Scipio
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700    
+      - Index: 12
+        Item: Poenitentia_Codex
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 13
+        Item: Poenitentia_Liber
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 14
+        Item: Poenitentia_Crystallum
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700  
+      - Index: 15
+        Item: Poenitentia_Caestus
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700  
+      - Index: 16
+        Item: Poenitentia_Ungula
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 17
+        Item: Poenitentia_Manus
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700        
+      - Index: 18
+        Item: Poenitentia_Mucro
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 19
+        Item: Poenitentia_Tenon
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700  
+      - Index: 20
+        Item: Poenetentia_Dilacero
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700    
+      - Index: 21
+        Item: Poenitentia_Nervus
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700                 
+      - Index: 22
+        Item: Poenetentia_Attendo
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 23
+        Item: Poenitentia_Chorda
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 24
+        Item: Poenitentia_Flagellum
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700   
+      - Index: 25
+        Item: Poenetentia_Vatia
+        RequiredItems:
+          - Item: Mine_As
+            Amount: 700  

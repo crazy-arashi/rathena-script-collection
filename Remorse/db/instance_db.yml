@@ -1,0 +1,7 @@
+  - Id: 121
+    Name: Tomb of Remorse
+    TimeLimit: 3600
+    Enter:
+      Map: 1@spa2
+      X: 52
+      Y: 198

@@ -1,0 +1,154 @@
+Header:
+  Type: BARTER_DB
+  Version: 1
+
+Body:
+  - Name: Ep19_Rgan_Scroll
+    Items:
+      - Index: 0
+        Item: Ep19_Rgan_Scroll
+        Zeny: 2000
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Rgan_Core_F
+            Amount: 2   
+  - Name: Ep19_Mana_Stones
+    Items:
+      - Index: 0
+        Item: Snow_F_Stone1
+        RequiredItems:
+          - Index: 0
+            Item: Snow_F_Ore
+            Amount: 5    
+      - Index: 1
+        Item: Snow_F_Stone2
+        RequiredItems:
+          - Index: 0
+            Item: Snow_F_Stone1
+            Amount: 5   
+      - Index: 2
+        Item: Snow_F_Stone3
+        RequiredItems:
+          - Index: 0
+            Item: Snow_F_Stone2
+            Amount: 5  
+  - Name: Ep19_Rep_1
+    Items:
+      - Index: 0
+        Item: Snow_F_Refine
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 200 
+      - Index: 1
+        Item: Ep19_Dry_Icegangu
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1    
+      - Index: 2
+        Item: Teleport_Ep19_01
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1  
+  - Name: Ep19_Rep_2
+    Items:
+      - Index: 0
+        Item: Snow_F_Refine
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 200 
+      - Index: 1
+        Item: Ep19_Dry_Icegangu
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1    
+      - Index: 2
+        Item: Teleport_Ep19_01
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1               
+      - Index: 3
+        Item: Glacier_W_Refine
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 500
+      - Index: 4
+        Item: C_Ep19_Rgan
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1000
+      - Index: 5
+        Item: C_Ep19_Iwin
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 1000
+  - Name: Ep19_Armor
+    Items:
+      - Index: 0
+        Item: Snowflower_Armor
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 1
+        Item: Snowflower_Robe
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 2
+        Item: Snowflower_Manteau
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 3
+        Item: Snowflower_Muffler
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 4
+        Item: Snowflower_Boots
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 5
+        Item: Snowflower_Shoes
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 6
+        Item: Snowflower_Pendant
+        RequiredItems:
+          - Index: 0
+            Item: Ep19_Snow_Flower
+            Amount: 100
+      - Index: 7
+        Item: Snowflower_Pendant
+        RequiredItems:
+          - Index: 0
+            Item: Snowflower_Ring
+            Amount: 100
+      - Index: 8
+        Item: Snowflower_Necklace
+        RequiredItems:
+          - Index: 0
+            Item: Snowflower_Ring
+            Amount: 100
+      - Index: 9
+        Item: Snowflower_Earring
+        RequiredItems:
+          - Index: 0
+            Item: Snowflower_Ring
+            Amount: 100

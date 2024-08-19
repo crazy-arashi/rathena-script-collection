@@ -1,28 +1,71 @@
-//= getnpc_var("<VAR NAME>"{,<NPC NAME>});
+/* Function to change get a variable value from another NPC
+** getnpc_var("<Variable Name>",{,<NPC NAME>});
+
+-- Use Cases
+.@value = getnpc_var("target_var","npc_name");
+.@value$ = getnpc_var("target_var$","npc_name");
+.@value$ = getnpc_var("target_var$[2]","npc_name");
+.@size = getarraysize(getnpcvar("target_array","npc_name"));
+*/
+
 function	script	getnpc_var	{
 	return getvariableofnpc(getd((compare(getarg(0),".")?"":".") + getarg(0)),getarg(1,strnpcinfo(3)));
 }
 
-//= setnpc_var("<ARRAY NAME>"{,<NPC NAME>});
+/* Function to change a variable/array from another NPC
+** setnpc_var("<Variable Name>",<New Value>,{,<NPC NAME>});
+
+-- Use Cases
+setnpc_var("target_var",10,"npc_name");
+setnpc_var("target_var$","HELLO","npc_name");
+setnpc_var("target_var$[2]","Change Array Value 2","npc_name");
+*/
+
 function	script	setnpc_var	{
 	set getvariableofnpc(getd((compare(getarg(0),".")?"":".") + getarg(0)),getarg(2,strnpcinfo(3))),getarg(1);
 	return;
 }
 
-//= getnpc_array("<ARRAY NAME>",<VAR NAME>{,<"NPC NAME">});
+/* Function to copy an array from another NPC
+** getnpc_array("<Target Array Variable>",<Temporary Array Variable>{,<"NPC Name">});
+
+-- Use Cases
+.@array_size = getnpc_array(".target_array",.@temp_array,"npc_name");
+
+- Target array data type should be the same
+- returns the array size
+*/
+
 function	script	getnpc_array	{
-	copyarray getd(".@temp_array" + (compare(getarg(0),"$")?"$":"") + "[0]"),getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarraysize(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))));
-	for(.@i = 0; .@i < getarraysize(getd(".@temp_array" + (compare(getarg(0),"$")?"$":""))); .@i++)
+	.@type$ = (compare(getarg(0),"$") ? "$" : "");
+	copyarray getd(".@temp_array" + .@type$ + "[0]"),getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarraysize(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))));
+	.@size = getarraysize(getd(".@temp_array" + .@type$));
+	if(.@size < 1){
+		debugmes "getnpc_array : The target array " + getarg(0) + " is empty."; 
+		return 0;
+	}
+	for(.@i = 0; .@i < .@size; .@i++)
 		set getelementofarray(getarg(1),.@i),getd(".@temp_array" + (compare(getarg(0),"$")?"$":"") + "[" + .@i + "]");
-	return;
+	return .@size;
 }
 
-//= getnpc_index("<ARRAY NAME>",<SEARCH VAR>{,<"NPC NAME">});
+/* Search the index of a value in from another NPC Variable
+** getnpc_arrindex("<Target Array Variable>",<Search Value>{,<"NPC Name">});
+
+-- Use Cases
+.@index = getnpc_arrindex(".target_array",7,"npc_name");
+*/
+
 function	script	getnpc_arrindex	{
 	return inarray(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarg(1));
 }
 
-//= instance_hide(<NPC NAME>,<BOOL>);
+/* Instance commands shorcuts
+instance_hide(<NPC Name>,<Bool>);
+instance_enable(<NPC Name>,<Bool>);
+instance_event(<NPC Name>,<Event Name>,<Attach Player Bool>);
+*/
+
 function	script	instance_hide	{
 	if(getarg(1))
 		hideonnpc instance_npcname(getarg(0));
@@ -31,7 +74,6 @@ function	script	instance_hide	{
 	return;
 }
 
-//= instance_enable(<NPC NAME>,<BOOL>);
 function	script	instance_enable	{
 	if(getarg(1))
 		enablenpc instance_npcname(getarg(0));
@@ -40,7 +82,6 @@ function	script	instance_enable	{
 	return;
 }
 
-//= instance_event(<NPC NAME>,<EVENT NAME>,<BOOL>);
 function	script	instance_event	{
 	if(getarg(2))
 		doevent instance_npcname(getarg(0)) + "::" + getarg(1);
@@ -49,36 +90,8 @@ function	script	instance_event	{
 	return;
 }
 
-//= get_instance_var(<VAR>);
-function	script	get_instance_var	{
-	return getd("'" + getarg(0));
-}
+// Shorcut/Personal preference functions
 
-//= set_instance_var(<VAR>,<VALUE>);
-function	script	set_instance_var	{
-	setd("'" + getarg(0),getarg(1));
-	return;
-}
-
-
-//= getd_instance_var(<VAR>); (For non-instance NPC)
-function	script	getd_instance_var	{
-	return getvariableofinstance("'" + getarg(0), getarg(1));
-}
-
-//= setd_instance_var(<VAR>,<VALUE>); (For non-instance NPC)
-function	script	setd_instance_var	{
-	set getvariableofinstance("'" + getarg(0), getarg(2)), getarg(1);
-	return;
-}
-
-//= instance_effect(<EFFECT ID>,<NPC>);
-function	script	instance_effect	{
-	specialeffect getarg(0),AREA,getarg(1);
-	return;
-}
-
-//= Lazy version of cloakon/off
 function	script	cloaknpc	{
 	if(getargcount() > 2){
 		if(getarg(1))
@@ -94,21 +107,31 @@ function	script	cloaknpc	{
 	return;
 }
 
-//= Duplicate for dummy cloaked npc
+function	script	pctalk	{
+	unittalk getcharid(3),strcharinfo(0) + ":" + getarg(0),bc_self;
+	return;
+}
+
+function	script	pcblock	{
+	setpcblock PCBLOCK_NPC,getarg(0);
+	return;
+}
+
+//= Cloaked Dummy NPC
 -	script	dummynpc	-1,{
 	end;
 	
 OnInit:
-	cloakonnpc strnpcinfo(0);
+	cloakonnpcself;
 end;
 }
 
-//= Duplicate for dummy npc
+//= Normal Dummy NPC
 -	script	dummynpc2	-1,{ 
 	end; 
 }
 
-//= Duplicate for dummy npc in instances
+//= Disabled Dummy NPC in Instance
 -	script	instancedummynpc	-1,{ 
 	end;
 	

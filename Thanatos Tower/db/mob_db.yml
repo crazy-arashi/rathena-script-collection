@@ -1,0 +1,1161 @@
+  - Id: 20562
+    AegisName: HIDDEN_MOB8
+    Name: Hidden Mob
+    JapaneseName: Hidden Mob
+    Level: 170
+    Hp: 100000
+    Attack2: 1
+    Defense: 1
+    MagicDefense: 1
+    Str: 200
+    Agi: 200
+    Vit: 200
+    Int: 200
+    Dex: 200
+    Luk: 200
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackMotion: 1000
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+  - Id: 20773
+    AegisName: EMPATHIZER
+    Name: Empathizer
+    Level: 200
+    Hp: 3788426
+    BaseExp: 128404
+    JobExp: 95440
+    Attack: 2944
+    Attack2: 4067
+    Defense: 405
+    MagicDefense: 82
+    Str: 151
+    Agi: 76
+    Vit: 81
+    Int: 203
+    Dex: 223
+    Luk: 89
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 120
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Fate_Shard_A
+        Rate: 50
+      - Item: Fate_Shard_C
+        Rate: 50
+      - Item: Fate_Fragment
+        Rate: 1
+      - Item: Dark_Red_Jewel
+        Rate: 1000
+      - Item: Cursed_Seal
+        Rate: 50
+      - Item: aegis_300270
+        Rate: 1
+        StealProtected: true
+  - Id: 20774
+    AegisName: HAPPY_GIVER
+    Name: Happiness Giver
+    Level: 202
+    Hp: 3827826
+    BaseExp: 125446
+    JobExp: 94484
+    Attack: 2463
+    Attack2: 4252
+    Defense: 371
+    MagicDefense: 79
+    Str: 148
+    Agi: 96
+    Vit: 76
+    Int: 201
+    Dex: 217
+    Luk: 46
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Fate_Shard_C
+        Rate: 50
+      - Item: Fate_Fragment
+        Rate: 1
+      - Item: Fate_Shard_B
+        Rate: 50
+      - Item: Golden_Jewel
+        Rate: 1000
+      - Item: aegis_300271
+        Rate: 1
+        StealProtected: true
+  - Id: 20775
+    AegisName: THA_ANGER
+    Name: Anger of Thanatos
+    Level: 203
+    Hp: 3845405
+    BaseExp: 155446
+    JobExp: 112556
+    Attack: 2578
+    Attack2: 3264
+    Defense: 302
+    MagicDefense: 76
+    Str: 224
+    Agi: 156
+    Vit: 86
+    Int: 184
+    Dex: 223
+    Luk: 45
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 288
+    DamageMotion: 420
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sin_Shard_A
+        Rate: 50
+      - Item: Sin_Shard_E
+        Rate: 50
+      - Item: Sin_Fragment
+        Rate: 1
+      - Item: Brigan
+        Rate: 1000
+      - Item: Piece_Of_Memory_Blue
+        Rate: 10000
+      - Item: aegis_300274
+        Rate: 1
+        StealProtected: true
+  - Id: 20776
+    AegisName: THA_HORROR
+    Name: Horror of Thanatos
+    Level: 201
+    Hp: 3807368
+    BaseExp: 164110
+    JobExp: 101455
+    Attack: 2644
+    Attack2: 3345
+    Defense: 297
+    MagicDefense: 75
+    Str: 221
+    Agi: 126
+    Vit: 64
+    Int: 235
+    Dex: 234
+    Luk: 63
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 670
+    DamageMotion: 482
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sin_Shard_B
+        Rate: 50
+      - Item: Sin_Shard_E
+        Rate: 50
+      - Item: Sin_Fragment
+        Rate: 1
+      - Item: Piece_Of_Memory_Green
+        Rate: 10000
+      - Item: Brigan
+        Rate: 1000
+      - Item: aegis_300275
+        Rate: 1
+        StealProtected: true
+  - Id: 20777
+    AegisName: THA_RESENT
+    Name: Resentment of Thanatos
+    Level: 201
+    Hp: 3883906
+    BaseExp: 141844
+    JobExp: 114335
+    Attack: 2456
+    Attack2: 3614
+    Defense: 316
+    MagicDefense: 115
+    Str: 215
+    Agi: 124
+    Vit: 65
+    Int: 248
+    Dex: 234
+    Luk: 61
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sin_Shard_C
+        Rate: 50
+      - Item: Sin_Shard_E
+        Rate: 50
+      - Item: Sin_Fragment
+        Rate: 1
+      - Item: Brigan
+        Rate: 1000
+      - Item: Piece_Of_Memory_Purple
+        Rate: 10000
+      - Item: aegis_300277
+        Rate: 1
+        StealProtected: true
+  - Id: 20778
+    AegisName: THA_REGRET
+    Name: Regret of Thanatos
+    Level: 202
+    Hp: 3831613
+    BaseExp: 153224
+    JobExp: 102498
+    Attack: 2558
+    Attack2: 3565
+    Defense: 403
+    MagicDefense: 81
+    Str: 184
+    Agi: 112
+    Vit: 55
+    Int: 226
+    Dex: 235
+    Luk: 43
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Sin_Shard_D
+        Rate: 50
+      - Item: Sin_Shard_E
+        Rate: 50
+      - Item: Sin_Fragment
+        Rate: 1
+      - Item: Piece_Of_Memory_Red
+        Rate: 10000
+      - Item: Brigan
+        Rate: 1000
+      - Item: aegis_300276
+        Rate: 1
+        StealProtected: true
+  - Id: 20779
+    AegisName: VOID_MIMIC
+    Name: "Void Mimic "
+    Level: 203
+    Hp: 3842817
+    BaseExp: 90665
+    JobExp: 70665
+    Attack: 1959
+    Attack2: 3084
+    Defense: 251
+    MagicDefense: 125
+    Str: 142
+    Agi: 180
+    Vit: 63
+    Int: 57
+    Dex: 182
+    Luk: 67
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 168
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 04
+    Class: Guardian
+    Modes:
+      CastSensorIdle: true
+      Detector: true
+    Drops:
+      - Item: Old_Blue_Box
+        Rate: 30
+      - Item: Old_Violet_Box
+        Rate: 1
+      - Item: Light_Granule
+        Rate: 100
+      - Item: aegis_300278
+        Rate: 1
+        StealProtected: true
+  - Id: 20780
+    AegisName: BOOK_OF_DEATH
+    Name: "Book of Death "
+    Level: 204
+    Hp: 3864501
+    BaseExp: 95664
+    JobExp: 70222
+    Attack: 1834
+    Attack2: 2834
+    Defense: 306
+    MagicDefense: 110
+    Str: 151
+    Agi: 74
+    Vit: 83
+    Int: 128
+    Dex: 208
+    Luk: 35
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 176
+    AttackMotion: 912
+    DamageMotion: 300
+    Ai: 09
+    Class: Guardian
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Worn_Out_Page
+        Rate: 4000
+      - Item: Bookclip_In_Memory
+        Rate: 300
+      - Item: Bloody_Page
+        Rate: 500
+      - Item: aegis_300279
+        Rate: 1
+        StealProtected: true
+  - Id: 20781
+    AegisName: ELDEST
+    Name: Eldest
+    Level: 205
+    Hp: 7341
+    BaseExp: 90114
+    JobExp: 68665
+    Attack: 2359
+    Attack2: 2802
+    Defense: 295
+    MagicDefense: 128
+    Str: 147
+    Agi: 153
+    Vit: 35
+    Int: 158
+    Dex: 208
+    Luk: 31
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 165
+    AttackDelay: 1552
+    AttackMotion: 1152
+    DamageMotion: 336
+    Ai: 09
+    Class: Guardian
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Old_Magic_Circle
+        Rate: 4000
+      - Item: Rent_Spell_Book
+        Rate: 1500
+      - Item: Old_Card_Album
+        Rate: 1
+      - Item: aegis_300269
+        Rate: 1
+        StealProtected: true
+  - Id: 20782
+    AegisName: CROW_DUKE
+    Name: Crow Duke
+    Level: 205
+    Hp: 3894053
+    BaseExp: 100665
+    JobExp: 86554
+    Attack: 2624
+    Attack2: 1300
+    Defense: 514
+    MagicDefense: 129
+    Str: 156
+    Agi: 188
+    Vit: 95
+    Int: 158
+    Dex: 208
+    Luk: 63
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 195
+    AttackDelay: 1145
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Tatters_Clothes
+        Rate: 2200
+      - Item: Soft_Feather
+        Rate: 500
+      - Item: Crystal_Mirror
+        Rate: 1
+      - Item: aegis_300268
+        Rate: 1
+        StealProtected: true
+  - Id: 20783
+    AegisName: CROW_BARON
+    Name: Crow Baron
+    Level: 205
+    Hp: 3893746
+    BaseExp: 105665
+    JobExp: 87554
+    Attack: 2624
+    Attack2: 1300
+    Defense: 514
+    MagicDefense: 129
+    Str: 165
+    Agi: 178
+    Vit: 85
+    Int: 178
+    Dex: 208
+    Luk: 63
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 175
+    AttackDelay: 1145
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Soft_Feather
+        Rate: 2500
+      - Item: Tatters_Clothes
+        Rate: 3500
+      - Item: Wind_Scroll_1_5
+        Rate: 100
+      - Item: aegis_300267
+        Rate: 1
+        StealProtected: true
+  - Id: 20784
+    AegisName: MD_THANATOS
+    Name: Thanatos
+    Level: 210
+    Hp: 442473071
+    Attack: 3671
+    Attack2: 6956
+    Defense: 390
+    MagicDefense: 86
+    Str: 200
+    Agi: 223
+    Vit: 10
+    Int: 286
+    Dex: 256
+    Luk: 78
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 115
+    AttackMotion: 716
+    DamageMotion: 504
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Sin_Fragment
+        Rate: 5000
+      - Item: Thanatos_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20785
+    AegisName: MD_BROKEN_THANATOS
+    Name: Broken Thanatos
+    Level: 210
+    Hp: 442473071
+    Attack: 5671
+    Attack2: 8956
+    Defense: 390
+    MagicDefense: 86
+    Str: 200
+    Agi: 223
+    Vit: 10
+    Int: 326
+    Dex: 256
+    Luk: 78
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 115
+    AttackMotion: 716
+    DamageMotion: 504
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Fate_Fragment
+        Rate: 5000
+      - Item: Thanatos_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20786
+    AegisName: MD_THA_BUFF
+    Name: Memory
+    Level: 150
+    Hp: 704240
+    Attack: 1
+    Attack2: 1
+    Defense: 1
+    MagicDefense: 1
+    Str: 100
+    Agi: 100
+    Vit: 100
+    Int: 100
+    Dex: 100
+    Luk: 100
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 1000
+    AttackDelay: 1000
+    AttackMotion: 1000
+    DamageMotion: 1000
+  - Id: 20787
+    AegisName: MD_EMPATHIZER
+    Name: Empathizer
+    Level: 200
+    Hp: 3788426
+    Attack: 2944
+    Attack2: 4067
+    Defense: 405
+    MagicDefense: 82
+    Str: 151
+    Agi: 76
+    Vit: 81
+    Int: 203
+    Dex: 223
+    Luk: 89
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 120
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Shine_Necklace_Z
+        Rate: 1
+      - Item: Shine_Ring_Z
+        Rate: 1
+      - Item: aegis_300270
+        Rate: 1
+        StealProtected: true
+  - Id: 20788
+    AegisName: MD_HAPPY_GIVER
+    Name: Happiness Giver
+    Level: 202
+    Hp: 3827826
+    Attack: 2463
+    Attack2: 4252
+    Defense: 371
+    MagicDefense: 79
+    Str: 148
+    Agi: 96
+    Vit: 76
+    Int: 201
+    Dex: 217
+    Luk: 46
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Shine_Necklace_S
+        Rate: 1
+      - Item: Shine_Ring_S
+        Rate: 1
+      - Item: aegis_300271
+        Rate: 1
+        StealProtected: true
+  - Id: 20789
+    AegisName: MD_RETRIBUTION
+    Name: Divine Punisher
+    Level: 205
+    Hp: 3888057
+    Attack: 3567
+    Attack2: 4864
+    Defense: 397
+    MagicDefense: 77
+    Str: 184
+    Agi: 65
+    Vit: 79
+    Int: 206
+    Dex: 237
+    Luk: 46
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 120
+    AttackDelay: 360
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Shine_Necklace_R
+        Rate: 1
+      - Item: Shine_Ring_R
+        Rate: 1
+  - Id: 20790
+    AegisName: MD_SHELTER
+    Name: Pray Giver
+    Level: 204
+    Hp: 3869550
+    Attack: 2567
+    Attack2: 3944
+    Defense: 405
+    MagicDefense: 82
+    Str: 184
+    Agi: 61
+    Vit: 89
+    Int: 253
+    Dex: 190
+    Luk: 36
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 432
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Shine_Necklace_E
+        Rate: 1
+      - Item: Shine_Ring_E
+        Rate: 1
+      - Item: aegis_300272
+        Rate: 1
+        StealProtected: true
+  - Id: 20791
+    AegisName: MD_SOLACE
+    Name: Smile Giver
+    Level: 201
+    Hp: 3811137
+    Attack: 3334
+    Attack2: 2565
+    Defense: 372
+    MagicDefense: 78
+    Str: 167
+    Agi: 102
+    Vit: 53
+    Int: 182
+    Dex: 202
+    Luk: 56
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 576
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Shine_Necklace_A
+        Rate: 1
+      - Item: Shine_Ring_A
+        Rate: 1
+      - Item: aegis_300273
+        Rate: 1
+        StealProtected: true
+  - Id: 20792
+    AegisName: MD_THA_ANGER
+    Name: Anger of Thanatos
+    Level: 203
+    Hp: 3845405
+    Attack: 4578
+    Attack2: 5644
+    Defense: 302
+    MagicDefense: 76
+    Str: 224
+    Agi: 156
+    Vit: 86
+    Int: 184
+    Dex: 223
+    Luk: 45
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 288
+    DamageMotion: 420
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_S
+        Rate: 1
+      - Item: Sin_Ring_S
+        Rate: 1
+      - Item: aegis_300274
+        Rate: 1
+        StealProtected: true
+  - Id: 20793
+    AegisName: MD_THA_HORROR
+    Name: Horror of Thanatos
+    Level: 201
+    Hp: 3807368
+    Attack: 3644
+    Attack2: 4864
+    Defense: 297
+    MagicDefense: 75
+    Str: 221
+    Agi: 126
+    Vit: 64
+    Int: 235
+    Dex: 234
+    Luk: 63
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Poison
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 670
+    DamageMotion: 482
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_A
+        Rate: 1
+      - Item: Sin_Ring_A
+        Rate: 1
+      - Item: aegis_300275
+        Rate: 1
+        StealProtected: true
+  - Id: 20794
+    AegisName: MD_THA_RESENT
+    Name: Resentment of Thanatos
+    Level: 201
+    Hp: 3883906
+    Attack: 3456
+    Attack2: 5114
+    Defense: 316
+    MagicDefense: 115
+    Str: 215
+    Agi: 124
+    Vit: 65
+    Int: 248
+    Dex: 234
+    Luk: 61
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_E
+        Rate: 1
+      - Item: Sin_Ring_E
+        Rate: 1
+      - Item: aegis_300277
+        Rate: 1
+        StealProtected: true
+  - Id: 20795
+    AegisName: MD_THA_REGRET
+    Name: Regret of Thanatos
+    Level: 202
+    Hp: 3831613
+    Attack: 3558
+    Attack2: 4865
+    Defense: 403
+    MagicDefense: 81
+    Str: 184
+    Agi: 112
+    Vit: 55
+    Int: 226
+    Dex: 235
+    Luk: 43
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_O
+        Rate: 1
+      - Item: Sin_Ring_O
+        Rate: 1
+      - Item: aegis_300276
+        Rate: 1
+        StealProtected: true
+  - Id: 20796
+    AegisName: MD_THA_ODIUM
+    Name: Thanatos' Hatred
+    Level: 204
+    Hp: 3864195
+    Attack: 4061
+    Attack2: 2440
+    Defense: 300
+    MagicDefense: 77
+    Str: 204
+    Agi: 105
+    Vit: 56
+    Int: 188
+    Dex: 227
+    Luk: 45
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 115
+    AttackMotion: 288
+    DamageMotion: 420
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_T
+        Rate: 1
+      - Item: Sin_Ring_T
+        Rate: 1
+  - Id: 20797
+    AegisName: MD_THA_DESPERO
+    Name: Thanatos' Despair
+    Level: 203
+    Hp: 3850734
+    Attack: 4032
+    Attack2: 2271
+    Defense: 407
+    MagicDefense: 76
+    Str: 202
+    Agi: 104
+    Vit: 65
+    Int: 226
+    Dex: 249
+    Luk: 76
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_R
+        Rate: 1
+      - Item: Sin_Ring_R
+        Rate: 1
+  - Id: 20798
+    AegisName: MD_THA_MAERO
+    Name: Thanatos' Sorrow
+    Level: 202
+    Hp: 3834643
+    Attack: 4058
+    Attack2: 2456
+    Defense: 463
+    MagicDefense: 83
+    Str: 207
+    Agi: 89
+    Vit: 66
+    Int: 215
+    Dex: 233
+    Luk: 67
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Sin_Necklace_S
+        Rate: 1
+      - Item: Sin_Ring_S
+        Rate: 1
+  - Id: 20799
+    AegisName: MD_THA_DOLOR
+    Name: Thanatos' Anguish
+    Level: 129
+    Hp: 3830553
+    Attack: 4984
+    Attack2: 2001
+    Defense: 297
+    MagicDefense: 113
+    Str: 187
+    Agi: 196
+    Vit: 96
+    Int: 206
+    Dex: 226
+    Luk: 74
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Undead
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 160
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 20
+    Class: Boss
+  - Id: 20800
+    AegisName: MD_OBSERVATION
+    Name: Observation
+    Level: 203
+    Hp: 3848907
+    Attack: 2688
+    Attack2: 4489
+    Defense: 328
+    MagicDefense: 121
+    Str: 156
+    Agi: 102
+    Vit: 86
+    Int: 196
+    Dex: 204
+    Luk: 56
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 432
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Shine_Necklace_AQ
+        Rate: 1
+      - Item: Shine_Ring_AQ
+        Rate: 1
+  - Id: 20844
+    AegisName: PRAY_GIVER
+    Name: Pray Giver
+    Level: 204
+    Hp: 3869550
+    BaseExp: 123446
+    JobExp: 97334
+    Attack: 2567
+    Attack2: 3944
+    Defense: 405
+    MagicDefense: 82
+    Str: 184
+    Agi: 61
+    Vit: 89
+    Int: 253
+    Dex: 190
+    Luk: 36
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 160
+    AttackDelay: 432
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Fate_Shard_E
+        Rate: 50
+      - Item: Fate_Shard_C
+        Rate: 50
+      - Item: Fate_Fragment
+        Rate: 1
+      - Item: Cardinal_Jewel
+        Rate: 1000
+      - Item: aegis_300272
+        Rate: 1
+        StealProtected: true
+  - Id: 20845
+    AegisName: MD_SOLACE
+    Name: Smile Giver
+    Level: 201
+    Hp: 3811137
+    BaseExp: 127446
+    JobExp: 91334
+    Attack: 3334
+    Attack2: 2565
+    Defense: 372
+    MagicDefense: 78
+    Str: 167
+    Agi: 102
+    Vit: 53
+    Int: 182
+    Dex: 202
+    Luk: 56
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 576
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Fate_Shard_D
+        Rate: 50
+      - Item: Fate_Shard_C
+        Rate: 50
+      - Item: Fate_Fragment
+        Rate: 1
+      - Item: Dark_Red_Jewel
+        Rate: 1000
+      - Item: aegis_300273
+        Rate: 1
+        StealProtected: true

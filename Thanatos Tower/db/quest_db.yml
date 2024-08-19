@@ -1,0 +1,71 @@
+  - Id: 17415
+    Title: Thanatos Tower Monsters
+  - Id: 17416
+    Title: 9th Floor Monsters
+    Targets:
+      - Mob: CROW_DUKE
+        Count: 20
+      - Mob: CROW_BARON
+        Count: 20
+  - Id: 17417
+    Title: 10th Floor Monsters
+    Targets:
+      - Mob: VOID_MIMIC
+        Count: 15
+      - Mob: BOOK_OF_DEATH
+        Count: 15
+      - Mob: ELDEST
+        Count: 15
+  - Id: 17418
+    Title: 11th Floor Monsters
+    Targets:
+      - Mob: EMPATHIZER
+        Count: 15
+      - Mob: HAPPY_GIVER
+        Count: 15
+  - Id: 17419
+    Title: 11th Floor Monsters
+    Targets:
+      - Mob: PRAY_GIVER
+        Count: 15
+      - Mob: SMILE_GIVER
+        Count: 15
+  - Id: 17420
+    Title: 12th Floor Monsters
+    Targets:
+      - Mob: THA_ANGER
+        Count: 10
+      - Mob: THA_HORROR
+        Count: 10
+  - Id: 17421
+    Title: 12th Floor Monsters
+    Targets:
+      - Mob: THA_RESENT
+        Count: 10
+      - Mob: THA_REGRET
+        Count: 10
+  - Id: 17422
+    Title: Waiting Thanatos Tower 9F
+    TimeLimit: 4h
+  - Id: 17423
+    Title: Waiting Thanatos Tower 10F
+    TimeLimit: 4h
+  - Id: 17424
+    Title: Waiting Thanatos Tower 11F
+    TimeLimit: 4h
+  - Id: 17425
+    Title: Waiting Thanatos Tower 12F
+    TimeLimit: 4h
+  - Id: 18026
+    Title: Memories of Thanatos
+    Targets:
+      - Mob: MD_THANATOS
+        Count: 1
+  - Id: 18027
+    Title: Memories of Thanatos
+    Targets:
+      - Mob: MD_BROKEN_THANATOS
+        Count: 1
+  - Id: 18028
+    Title: Memories of Thanatos - Wait
+    TimeLimit: 4h

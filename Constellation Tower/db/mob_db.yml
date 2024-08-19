@@ -1,0 +1,3192 @@
+  - Id: 20994
+    AegisName: MD_BETELGEUSE
+    Name: Betelguese
+    Level: 250
+    Hp: 500000000
+    Attack: 34020
+    Attack2: 21020
+    Defense: 346
+    MagicDefense: 102
+    Str: 560
+    Agi: 200
+    Vit: 200
+    Int: 610
+    Dex: 500
+    Luk: 150
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Dragon
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 176
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      NoCast: true
+      Mvp: true
+  - Id: 20995
+    AegisName: MD_G_DEADSOUL
+    Name: Soul of Betelguese
+    Level: 250
+    Hp: 20
+    Defense: 100
+    MagicDefense: 100
+    Str: 100
+    Agi: 100
+    Vit: 100
+    Int: 100
+    Dex: 100
+    Luk: 100
+    AttackRange: 1
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1000
+    AttackMotion: 1000
+    DamageMotion: 1000
+    Ai: 25
+    Class: Guardian
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+      KnockBackImmune: true
+  - Id: 20996
+    AegisName: MD_NAGHT_SIEGER
+    Name: Naght Sieger
+    Level: 250
+    Hp: 300000000
+    Attack: 15020
+    Attack2: 13200
+    Defense: 410
+    MagicDefense: 80
+    Str: 290
+    Agi: 160
+    Vit: 180
+    Int: 320
+    Dex: 364
+    Luk: 90
+    AttackRange: 2
+    SkillRange: 16
+    ChaseRange: 16
+    Size: Large
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 76
+    AttackMotion: 432
+    DamageMotion: 504
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Nahtzigger_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 20997
+    AegisName: MD_G_ENTWEIHEN_M
+    Name: Entweihen Crothen
+    Level: 200
+    Hp: 200400500
+    Attack: 4840
+    Attack2: 3600
+    Defense: 171
+    MagicDefense: 66
+    Str: 190
+    Agi: 170
+    Vit: 140
+    Int: 260
+    Dex: 290
+    Luk: 60
+    AttackRange: 12
+    SkillRange: 14
+    ChaseRange: 16
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    AttackDelay: 140
+    AttackMotion: 540
+    DamageMotion: 576
+    Ai: 10
+    Class: Boss
+  - Id: 20998
+    AegisName: MD_T_JAKK
+    Name: Jakk
+    Level: 163
+    Hp: 2054000
+    Attack: 2229
+    Attack2: 1437
+    Defense: 180
+    MagicDefense: 50
+    Str: 158
+    Agi: 143
+    Vit: 142
+    Int: 125
+    Dex: 155
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1180
+    AttackMotion: 480
+    DamageMotion: 648
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 20999
+    AegisName: MD_T_STONE_SHOOTER
+    Name: Stone Shooter
+    Level: 164
+    Hp: 2101000
+    Attack: 2211
+    Attack2: 1453
+    Defense: 176
+    MagicDefense: 30
+    Str: 155
+    Agi: 155
+    Vit: 136
+    Int: 115
+    Dex: 177
+    Luk: 65
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 2413
+    AttackMotion: 1248
+    DamageMotion: 768
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21000
+    AegisName: MD_T_GRIZZLY
+    Name: Grizzly
+    Level: 166
+    Hp: 2241000
+    BaseExp: 731
+    JobExp: 822
+    Attack: 2267
+    Attack2: 1413
+    Defense: 218
+    MagicDefense: 4
+    Str: 160
+    Agi: 126
+    Vit: 144
+    Int: 13
+    Dex: 178
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1492
+    AttackMotion: 1092
+    DamageMotion: 192
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21001
+    AegisName: MD_T_STALACTIC_GOLEM
+    Name: Stalactic Golem
+    Level: 168
+    Hp: 2590000
+    Attack: 2358
+    Attack2: 1321
+    Defense: 460
+    MagicDefense: 10
+    Str: 167
+    Agi: 147
+    Vit: 148
+    Int: 11
+    Dex: 163
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 1264
+    AttackMotion: 864
+    DamageMotion: 288
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21002
+    AegisName: MD_T_CHIMERA
+    Name: Chimera
+    Level: 170
+    Hp: 2640600
+    Attack: 3029
+    Attack2: 2148
+    Defense: 159
+    MagicDefense: 10
+    Str: 60
+    Agi: 138
+    Vit: 110
+    Int: 188
+    Dex: 183
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 772
+    AttackMotion: 672
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21003
+    AegisName: MD_T_KARAKASA
+    Name: Karakasa
+    Level: 172
+    Hp: 3009200
+    Attack: 2172
+    Attack2: 1542
+    Defense: 186
+    MagicDefense: 68
+    Str: 166
+    Agi: 173
+    Vit: 133
+    Int: 120
+    Dex: 153
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 155
+    AttackDelay: 1638
+    AttackMotion: 2016
+    DamageMotion: 576
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21004
+    AegisName: MD_T_RIDEWORD
+    Name: Rideword
+    Level: 174
+    Hp: 3222000
+    BaseExp: 810
+    JobExp: 1212
+    Attack: 2387
+    Attack2: 1722
+    Defense: 122
+    MagicDefense: 76
+    Str: 167
+    Agi: 153
+    Vit: 132
+    Int: 144
+    Dex: 204
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 864
+    AttackMotion: 500
+    DamageMotion: 192
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21005
+    AegisName: MD_T_PARASITE
+    Name: Parasite
+    Level: 176
+    Hp: 3222000
+    Attack: 3177
+    Attack2: 1345
+    Defense: 126
+    MagicDefense: 60
+    Str: 155
+    Agi: 178
+    Vit: 133
+    Int: 150
+    Dex: 188
+    Luk: 140
+    AttackRange: 8
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 400
+    AttackDelay: 864
+    AttackMotion: 864
+    DamageMotion: 672
+    Ai: 10
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21006
+    AegisName: MD_T_WRAITH
+    Name: Wraith
+    Level: 177
+    Hp: 5168000
+    Attack: 3690
+    Attack2: 1561
+    Defense: 160
+    MagicDefense: 80
+    Str: 162
+    Agi: 126
+    Vit: 130
+    Int: 155
+    Dex: 176
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 300
+    AttackDelay: 1816
+    AttackMotion: 576
+    DamageMotion: 240
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21007
+    AegisName: MD_T_PETIT_
+    Name: Petite
+    Level: 179
+    Hp: 3556000
+    Attack: 3080
+    Attack2: 1360
+    Defense: 172
+    MagicDefense: 84
+    Str: 163
+    Agi: 139
+    Vit: 131
+    Int: 155
+    Dex: 172
+    Luk: 85
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1872
+    AttackMotion: 672
+    DamageMotion: 288
+    Ai: 09
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21008
+    AegisName: MD_T_WIND_GHOST
+    Name: Wind Ghost
+    Level: 180
+    Hp: 4008000
+    Attack: 3182
+    Attack2: 2195
+    Defense: 64
+    MagicDefense: 51
+    Str: 162
+    Agi: 127
+    Vit: 125
+    Int: 155
+    Dex: 185
+    Luk: 70
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1056
+    AttackMotion: 1056
+    DamageMotion: 336
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21009
+    AegisName: MD_T_CLOCK
+    Name: Clock
+    Level: 181
+    Hp: 5556000
+    Attack: 3443
+    Attack2: 1553
+    Defense: 182
+    MagicDefense: 86
+    Str: 168
+    Agi: 124
+    Vit: 135
+    Int: 141
+    Dex: 181
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1092
+    AttackMotion: 792
+    DamageMotion: 480
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21010
+    AegisName: MD_T_RAYDRIC_ARCHER
+    Name: Raydric Archer
+    Level: 182
+    Hp: 4437000
+    Attack: 3415
+    Attack2: 1800
+    Defense: 126
+    MagicDefense: 80
+    Str: 153
+    Agi: 124
+    Vit: 140
+    Int: 115
+    Dex: 212
+    Luk: 80
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1152
+    AttackMotion: 1152
+    DamageMotion: 480
+    Ai: 05
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21011
+    AegisName: MD_T_INCREASE_SOIL
+    Name: Mi Gao
+    JapaneseName: Increase Soil
+    Level: 183
+    Hp: 5335000
+    Attack: 3365
+    Attack2: 1530
+    Defense: 112
+    MagicDefense: 39
+    Str: 167
+    Agi: 123
+    Vit: 141
+    Int: 149
+    Dex: 178
+    Luk: 80
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 445
+    AttackDelay: 106
+    AttackMotion: 1056
+    DamageMotion: 576
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21012
+    AegisName: MD_T_PENOMENA
+    Name: Penomena
+    Level: 185
+    Hp: 4589000
+    Attack: 3481
+    Attack2: 1541
+    Defense: 170
+    MagicDefense: 64
+    Str: 176
+    Agi: 138
+    Vit: 135
+    Int: 135
+    Dex: 189
+    Luk: 60
+    AttackRange: 7
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 832
+    AttackMotion: 500
+    DamageMotion: 600
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21013
+    AegisName: MD_T_PETIT
+    Name: Petite
+    Level: 186
+    Hp: 5799000
+    Attack: 3321
+    Attack2: 1566
+    Defense: 198
+    MagicDefense: 98
+    Str: 155
+    Agi: 132
+    Vit: 138
+    Int: 137
+    Dex: 154
+    Luk: 70
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Dragon
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 250
+    AttackDelay: 2468
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 09
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21014
+    AegisName: MD_T_ALARM
+    Name: Alarm
+    Level: 188
+    Hp: 5562000
+    Attack: 3319
+    Attack2: 1448
+    Defense: 212
+    MagicDefense: 106
+    Str: 170
+    Agi: 172
+    Vit: 140
+    Int: 125
+    Dex: 155
+    Luk: 75
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1020
+    AttackMotion: 500
+    DamageMotion: 768
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21015
+    AegisName: MD_T_ZOMBIE_PRISONER
+    Name: Zombie Prisoner
+    Level: 189
+    Hp: 8045000
+    Attack: 3392
+    Attack2: 1560
+    Defense: 89
+    MagicDefense: 28
+    Str: 187
+    Agi: 139
+    Vit: 158
+    Int: 105
+    Dex: 168
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 3
+    WalkSpeed: 350
+    AttackDelay: 1768
+    AttackMotion: 500
+    DamageMotion: 192
+    Ai: 13
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21016
+    AegisName: MD_T_MARIONETTE
+    Name: Marionette
+    Level: 190
+    Hp: 7166000
+    Attack: 3222
+    Attack2: 1900
+    Defense: 70
+    MagicDefense: 48
+    Str: 152
+    Agi: 179
+    Vit: 128
+    Int: 210
+    Dex: 172
+    Luk: 70
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 1480
+    AttackMotion: 480
+    DamageMotion: 1056
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21017
+    AegisName: MD_T_PERMETER
+    Name: Permeter
+    Level: 190
+    Hp: 6575000
+    Attack: 3292
+    Attack2: 1556
+    Defense: 288
+    MagicDefense: 100
+    Str: 168
+    Agi: 128
+    Vit: 155
+    Int: 140
+    Dex: 142
+    Luk: 75
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 250
+    AttackDelay: 1100
+    AttackMotion: 483
+    DamageMotion: 528
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21018
+    AegisName: MD_T_SKEL_PRISONER
+    Name: Skeleton Prisoner
+    Level: 191
+    Hp: 9194000
+    Attack: 3606
+    Attack2: 1555
+    Defense: 95
+    MagicDefense: 41
+    Str: 184
+    Agi: 135
+    Vit: 160
+    Int: 120
+    Dex: 171
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 3
+    WalkSpeed: 350
+    AttackDelay: 1848
+    AttackMotion: 500
+    DamageMotion: 576
+    Ai: 13
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21019
+    AegisName: MD_T_OWL_DUKE
+    Name: Owl Duke
+    Level: 192
+    Hp: 7381000
+    Attack: 3624
+    Attack2: 2300
+    Defense: 80
+    MagicDefense: 45
+    Str: 154
+    Agi: 151
+    Vit: 145
+    Int: 188
+    Dex: 188
+    Luk: 80
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 195
+    AttackDelay: 1345
+    AttackMotion: 824
+    DamageMotion: 440
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21020
+    AegisName: MD_T_DEVIRUCHI
+    Name: Deviruchi
+    Level: 193
+    Hp: 8912000
+    Attack: 3477
+    Attack2: 1882
+    Defense: 72
+    MagicDefense: 16
+    Str: 161
+    Agi: 149
+    Vit: 130
+    Int: 185
+    Dex: 199
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 980
+    AttackMotion: 600
+    DamageMotion: 384
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21021
+    AegisName: MD_T_BLOOD_BUTTERFLY
+    Name: Bloody Butterfly
+    Level: 194
+    Hp: 7030000
+    Attack: 3610
+    Attack2: 1567
+    Defense: 158
+    MagicDefense: 100
+    Str: 170
+    Agi: 168
+    Vit: 140
+    Int: 155
+    Dex: 190
+    Luk: 60
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 145
+    AttackDelay: 472
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 13
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21022
+    AegisName: MD_T_STAPO
+    Name: Stapo
+    Level: 195
+    Hp: 8805000
+    Attack: 2573
+    Attack2: 1210
+    Defense: 248
+    MagicDefense: 72
+    Str: 120
+    Agi: 146
+    Vit: 125
+    Int: 135
+    Dex: 153
+    Luk: 600
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 936
+    AttackMotion: 792
+    DamageMotion: 432
+    Ai: 10
+    Modes:
+      CanMove: true
+      Looter: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21023
+    AegisName: MD_T_EVIL_CLOUD_HERMIT
+    Name: Taoist Hermit
+    JapaneseName: Evil Cloud Hermit
+    Level: 196
+    Hp: 8266000
+    Attack: 3611
+    Attack2: 1530
+    Defense: 132
+    MagicDefense: 92
+    Str: 163
+    Agi: 157
+    Vit: 145
+    Int: 160
+    Dex: 199
+    Luk: 75
+    AttackRange: 10
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 190
+    AttackDelay: 480
+    AttackMotion: 840
+    DamageMotion: 432
+    Ai: 05
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21024
+    AegisName: MD_T_THE_PAPER
+    Name: The Paper
+    Level: 197
+    Hp: 8500000
+    Attack: 3364
+    Attack2: 1510
+    Defense: 364
+    MagicDefense: 78
+    Str: 177
+    Agi: 149
+    Vit: 130
+    Int: 105
+    Dex: 161
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 350
+    AttackDelay: 720
+    AttackMotion: 864
+    DamageMotion: 504
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21025
+    AegisName: MD_T_TENGU
+    Name: Tengu
+    Level: 198
+    Hp: 10196000
+    Attack: 3274
+    Attack2: 1083
+    Defense: 268
+    MagicDefense: 92
+    Str: 199
+    Agi: 138
+    Vit: 140
+    Int: 130
+    Dex: 167
+    Luk: 60
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1439
+    AttackMotion: 1920
+    DamageMotion: 672
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21026
+    AegisName: MD_T_ALICE
+    Name: Alice
+    Level: 200
+    Hp: 9230000
+    Attack: 3514
+    Attack2: 2198
+    Defense: 93
+    MagicDefense: 73
+    Str: 182
+    Agi: 153
+    Vit: 145
+    Int: 170
+    Dex: 180
+    Luk: 80
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 502
+    AttackMotion: 1999
+    DamageMotion: 480
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21027
+    AegisName: MD_T_ANACONDAQ
+    Name: Anacondaq
+    Level: 200
+    Hp: 8510000
+    Attack: 3504
+    Attack2: 1555
+    Defense: 184
+    Str: 179
+    Agi: 146
+    Vit: 128
+    Int: 143
+    Dex: 156
+    Luk: 75
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Poison
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1576
+    AttackMotion: 576
+    DamageMotion: 576
+    Ai: 17
+    Modes:
+      Aggressive: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21028
+    AegisName: MD_T_GARGOYLE
+    Name: Gargoyle
+    Level: 200
+    Hp: 8772000
+    Attack: 3498
+    Attack2: 2189
+    Defense: 184
+    MagicDefense: 86
+    Str: 200
+    Agi: 161
+    Vit: 120
+    Int: 157
+    Dex: 200
+    Luk: 70
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Wind
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 1020
+    AttackMotion: 720
+    DamageMotion: 384
+    Ai: 05
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21029
+    AegisName: MD_T_CARAT
+    Name: Carat
+    Level: 203
+    Hp: 9222000
+    Attack: 3777
+    Attack2: 1760
+    Defense: 222
+    MagicDefense: 134
+    Str: 202
+    Agi: 164
+    Vit: 160
+    Int: 140
+    Dex: 167
+    Luk: 70
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1078
+    AttackMotion: 768
+    DamageMotion: 384
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21030
+    AegisName: MD_T_STING
+    Name: Sting
+    Level: 204
+    Hp: 10143000
+    Attack: 3794
+    Attack2: 1767
+    Defense: 282
+    MagicDefense: 68
+    Str: 208
+    Agi: 149
+    Vit: 168
+    Int: 134
+    Dex: 199
+    Luk: 74
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 300
+    AttackDelay: 528
+    AttackMotion: 500
+    DamageMotion: 240
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21031
+    AegisName: MD_T_GRYPHON
+    Name: Gryphon
+    Level: 205
+    Hp: 60720000
+    Attack: 3432
+    Attack2: 2103
+    Defense: 226
+    MagicDefense: 144
+    Str: 201
+    Agi: 233
+    Vit: 166
+    Int: 170
+    Dex: 237
+    Luk: 74
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 704
+    AttackMotion: 504
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21032
+    AegisName: MD_T_GIBBET
+    Name: Gibbet
+    Level: 205
+    Hp: 12999000
+    Attack: 3697
+    Attack2: 2385
+    Defense: 232
+    MagicDefense: 90
+    Str: 206
+    Agi: 156
+    Vit: 162
+    Int: 155
+    Dex: 161
+    Luk: 72
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 180
+    AttackDelay: 917
+    AttackMotion: 1584
+    DamageMotion: 576
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21033
+    AegisName: MD_T_NIGHTMARE_TERROR
+    Name: Nightmare Terror
+    Level: 207
+    Hp: 13289000
+    Attack: 3918
+    Attack2: 2260
+    Defense: 156
+    MagicDefense: 74
+    Str: 218
+    Agi: 153
+    Vit: 155
+    Int: 163
+    Dex: 188
+    Luk: 96
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 165
+    AttackDelay: 1216
+    AttackMotion: 816
+    DamageMotion: 432
+    Ai: 04
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21034
+    AegisName: MD_T_ANOLIAN
+    Name: Anolian
+    Level: 209
+    Hp: 15547000
+    Attack: 3650
+    Attack2: 2110
+    Defense: 122
+    MagicDefense: 22
+    Str: 230
+    Agi: 163
+    Vit: 155
+    Int: 166
+    Dex: 158
+    Luk: 96
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 190
+    AttackDelay: 900
+    AttackMotion: 500
+    DamageMotion: 864
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21035
+    AegisName: MD_T_BLOODY_MURDERER
+    Name: Bloody Murderer
+    Level: 210
+    Hp: 14099000
+    Attack: 4397
+    Attack2: 2298
+    Defense: 168
+    MagicDefense: 82
+    Str: 220
+    Agi: 165
+    Vit: 166
+    Int: 141
+    Dex: 189
+    Luk: 76
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 175
+    AttackDelay: 914
+    AttackMotion: 1344
+    DamageMotion: 384
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21036
+    AegisName: MD_T_ALIOT
+    Name: Aliot
+    Level: 212
+    Hp: 15669000
+    Attack: 4051
+    Attack2: 3289
+    Defense: 212
+    MagicDefense: 30
+    Str: 211
+    Agi: 156
+    Vit: 155
+    Int: 142
+    Dex: 162
+    Luk: 75
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 1296
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 13
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21037
+    AegisName: MD_T_VENATU
+    Name: Venatu
+    Level: 177
+    Hp: 12717000
+    Attack: 3717
+    Attack2: 2127
+    Defense: 192
+    MagicDefense: 40
+    Str: 199
+    Agi: 156
+    Vit: 158
+    Int: 162
+    Dex: 148
+    Luk: 80
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 504
+    AttackMotion: 1020
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21038
+    AegisName: MD_T_DEATHWORD
+    Name: Death Word
+    JapaneseName: Deathword
+    Level: 214
+    Hp: 16390000
+    Attack: 3834
+    Attack2: 2125
+    Defense: 136
+    MagicDefense: 80
+    Str: 191
+    Agi: 164
+    Vit: 153
+    Int: 188
+    Dex: 198
+    Luk: 74
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 176
+    AttackMotion: 912
+    DamageMotion: 300
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21039
+    AegisName: MD_T_PLASMA_B
+    Name: Plasma
+    Level: 215
+    Hp: 24651000
+    Attack: 3599
+    Attack2: 2170
+    Defense: 102
+    MagicDefense: 36
+    Str: 224
+    Agi: 174
+    Vit: 160
+    Int: 155
+    Dex: 166
+    Luk: 150
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Formless
+    Element: Water
+    ElementLevel: 4
+    WalkSpeed: 150
+    AttackDelay: 720
+    AttackMotion: 360
+    DamageMotion: 360
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21040
+    AegisName: MD_T_DIMIK
+    Name: Dimik
+    Level: 177
+    Hp: 10000000
+    Attack: 4144
+    Attack2: 2840
+    Defense: 90
+    MagicDefense: 56
+    Str: 115
+    Agi: 169
+    Vit: 140
+    Int: 115
+    Dex: 163
+    Luk: 84
+    AttackRange: 5
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 576
+    AttackMotion: 720
+    DamageMotion: 432
+    Ai: 04
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21041
+    AegisName: MD_T_MINI_DEMON
+    Name: Mini Demon
+    Level: 217
+    Hp: 19402000
+    Attack: 3938
+    Attack2: 2114
+    Defense: 160
+    MagicDefense: 50
+    Str: 230
+    Agi: 169
+    Vit: 155
+    Int: 156
+    Dex: 179
+    Luk: 80
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Dark
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1000
+    AttackMotion: 600
+    DamageMotion: 384
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21042
+    AegisName: MD_T_LEIB_OLMAI
+    Name: Leib Olmai
+    Level: 187
+    Hp: 6050000
+    Attack: 3895
+    Attack2: 2150
+    Defense: 264
+    MagicDefense: 62
+    Str: 172
+    Agi: 135
+    Vit: 180
+    Int: 135
+    Dex: 164
+    Luk: 77
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 175
+    AttackDelay: 1260
+    AttackMotion: 230
+    DamageMotion: 192
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21043
+    AegisName: MD_T_WANDER_MAN
+    Name: Wanderer
+    Level: 220
+    Hp: 19307000
+    Attack: 4695
+    Attack2: 2105
+    Defense: 128
+    MagicDefense: 10
+    Str: 218
+    Agi: 192
+    Vit: 136
+    Int: 115
+    Dex: 207
+    Luk: 66
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 100
+    AttackDelay: 672
+    AttackMotion: 500
+    DamageMotion: 192
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21044
+    AegisName: MD_T_RETRIBUTION
+    Name: Baroness of Retribution
+    JapaneseName: Retribution
+    Level: 221
+    Hp: 22152000
+    Attack: 4117
+    Attack2: 2804
+    Defense: 122
+    MagicDefense: 70
+    Str: 212
+    Agi: 160
+    Vit: 145
+    Int: 177
+    Dex: 178
+    Luk: 70
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 120
+    AttackDelay: 360
+    AttackMotion: 480
+    DamageMotion: 360
+    Ai: 20
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21045
+    AegisName: MD_T_FLAME_SKULL
+    Name: Flame Skull
+    Level: 121
+    Hp: 21276000
+    Attack: 4074
+    Attack2: 2135
+    Defense: 186
+    MagicDefense: 80
+    Str: 211
+    Agi: 190
+    Vit: 160
+    Int: 170
+    Dex: 199
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 972
+    AttackMotion: 648
+    DamageMotion: 432
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21046
+    AegisName: MD_T_KNIGHT_OF_ABYSS
+    Name: Abysmal Knight
+    JapaneseName: Knight of Abyss
+    Level: 222
+    Hp: 23297000
+    Attack: 4734
+    Attack2: 2192
+    Defense: 204
+    MagicDefense: 100
+    Str: 221
+    Agi: 155
+    Vit: 168
+    Int: 170
+    Dex: 197
+    Luk: 76
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 300
+    AttackDelay: 1500
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21047
+    AegisName: MD_T_BANSHEE
+    Name: Banshee
+    Level: 230
+    Hp: 48666000
+    Attack: 5014
+    Attack2: 2703
+    Defense: 146
+    MagicDefense: 192
+    Str: 197
+    Agi: 171
+    Vit: 155
+    Int: 223
+    Dex: 198
+    Luk: 72
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 676
+    AttackMotion: 504
+    DamageMotion: 504
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 500
+      - Item: Meteorite_Dust
+        Rate: 250
+  - Id: 21325
+    AegisName: MD_T_MASTERING
+    Name: Mastering
+    Level: 142
+    Hp: 1260000
+    Attack: 1080
+    Attack2: 1040
+    Defense: 96
+    MagicDefense: 62
+    Str: 135
+    Agi: 121
+    Vit: 141
+    Int: 212
+    Dex: 129
+    Luk: 60
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Plant
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 300
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+  - Id: 21326
+    AegisName: MD_T_VAGABOND_WOLF
+    Name: Vagabond Wolf
+    Level: 193
+    Hp: 8203000
+    Attack: 4519
+    Attack2: 1146
+    Defense: 204
+    MagicDefense: 102
+    Str: 172
+    Agi: 163
+    Vit: 155
+    Int: 129
+    Dex: 190
+    Luk: 65
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Brute
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 150
+    AttackDelay: 1048
+    AttackMotion: 648
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+  - Id: 21327
+    AegisName: MD_T_VOCAL
+    Name: Vocal
+    Level: 118
+    Hp: 3317000
+    Attack: 1071
+    Attack2: 1195
+    Defense: 154
+    MagicDefense: 52
+    Str: 177
+    Agi: 126
+    Vit: 126
+    Int: 130
+    Dex: 153
+    Luk: 80
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Insect
+    Element: Earth
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1080
+    AttackMotion: 648
+    DamageMotion: 480
+    Ai: 21
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+  - Id: 21328
+    AegisName: MD_T_GOLDEN_BUG
+    Name: Golden Thief Bug
+    Level: 165
+    Hp: 22275000
+    Attack: 5952
+    Attack2: 2843
+    Defense: 318
+    MagicDefense: 162
+    Str: 171
+    Agi: 177
+    Vit: 180
+    Int: 162
+    Dex: 227
+    Luk: 76
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 768
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 07
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Gold
+        Rate: 1000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Golden_Bug_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21329
+    AegisName: MD_T_MISTRESS
+    Name: Mistress
+    Level: 178
+    Hp: 37800000
+    Attack: 5985
+    Attack2: 3967
+    Defense: 394
+    MagicDefense: 384
+    Str: 176
+    Agi: 286
+    Vit: 188
+    Int: 213
+    Dex: 272
+    Luk: 79
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Wind
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1148
+    AttackMotion: 648
+    DamageMotion: 300
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Young_Twig
+        Rate: 10
+      - Item: Mistress_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21330
+    AegisName: MD_T_MAYA
+    Name: Maya
+    Level: 155
+    Hp: 38000000
+    Attack: 5555
+    Attack2: 2650
+    Defense: 366
+    MagicDefense: 100
+    Str: 188
+    Agi: 172
+    Vit: 176
+    Int: 202
+    Dex: 192
+    Luk: 146
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Insect
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 864
+    AttackMotion: 1000
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Mother's_Nightmare
+        Rate: 10
+      - Item: Maya_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21331
+    AegisName: MD_T_PHREEONI
+    Name: Phreeoni
+    Level: 171
+    Hp: 30000000
+    Attack: 5693
+    Attack2: 3967
+    Defense: 528
+    MagicDefense: 186
+    Str: 188
+    Agi: 170
+    Vit: 212
+    Int: 187
+    Dex: 202
+    Luk: 171
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Neutral
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 1020
+    AttackMotion: 1020
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Jaws_Of_Ant
+        Rate: 5000
+      - Item: Phreeoni_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21332
+    AegisName: MD_T_DRAKE
+    Name: Drake
+    Level: 191
+    Hp: 80450000
+    Attack: 7519
+    Attack2: 5403
+    Defense: 558
+    MagicDefense: 270
+    Str: 221
+    Agi: 203
+    Vit: 214
+    Int: 207
+    Dex: 235
+    Luk: 71
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 620
+    AttackMotion: 420
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Drake_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21333
+    AegisName: MD_T_MOONLIGHT
+    Name: Moonlight Flower
+    Level: 179
+    Hp: 32400000
+    Attack: 7232
+    Attack2: 5251
+    Defense: 308
+    MagicDefense: 162
+    Str: 186
+    Agi: 202
+    Vit: 193
+    Int: 182
+    Dex: 231
+    Luk: 120
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Fire
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 1276
+    AttackMotion: 576
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Moonlight_Flower_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21334
+    AegisName: MD_T_BACSOJIN
+    Name: White Lady
+    JapaneseName: Bacsojin
+    Level: 197
+    Hp: 72050000
+    Attack: 5414
+    Attack2: 7036
+    Defense: 420
+    MagicDefense: 356
+    Str: 218
+    Agi: 344
+    Vit: 198
+    Int: 226
+    Dex: 305
+    Luk: 102
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Water
+    ElementLevel: 2
+    WalkSpeed: 160
+    AttackDelay: 576
+    AttackMotion: 960
+    DamageMotion: 480
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Limpid_Celestial_Robe
+        Rate: 3000
+  - Id: 21335
+    AegisName: MD_T_GOBLIN_LEADER
+    Name: Goblin Leader
+    Level: 155
+    Hp: 21692000
+    Attack: 2173
+    Attack2: 1449
+    Defense: 144
+    MagicDefense: 60
+    Str: 160
+    Agi: 167
+    Vit: 145
+    Int: 118
+    Dex: 166
+    Luk: 123
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 1
+    WalkSpeed: 120
+    AttackDelay: 1120
+    AttackMotion: 620
+    DamageMotion: 240
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+  - Id: 21336
+    AegisName: MD_T_KOBOLD_LEADER
+    Name: Kobold Leader
+    Level: 212
+    Hp: 13520000
+    Attack: 2995
+    Attack2: 1596
+    Defense: 180
+    MagicDefense: 114
+    Str: 235
+    Agi: 134
+    Vit: 168
+    Int: 156
+    Dex: 183
+    Luk: 47
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Wind
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1028
+    AttackMotion: 528
+    DamageMotion: 360
+    Ai: 21
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Kobold_Leader_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21337
+    AegisName: MD_T_TURTLE_GENERAL
+    Name: Turtle General
+    Level: 210
+    Hp: 14420000
+    Attack: 8169
+    Attack2: 5066
+    Defense: 788
+    MagicDefense: 246
+    Str: 216
+    Agi: 223
+    Vit: 254
+    Int: 199
+    Dex: 281
+    Luk: 98
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 900
+    AttackMotion: 1000
+    DamageMotion: 500
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Turtle_Shell
+        Rate: 5500
+      - Item: Yggdrasilberry
+        Rate: 1500
+      - Item: Old_Violet_Box
+        Rate: 2000
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Union_Of_Tribe
+        Rate: 1
+      - Item: Turtle_General_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21338
+    AegisName: MD_T_SAMURAI
+    Name: Samurai Specter
+    JapaneseName: Incantation Samurai
+    Level: 200
+    Hp: 90100000
+    Attack: 7855
+    Attack2: 2936
+    Defense: 692
+    MagicDefense: 280
+    Str: 245
+    Agi: 261
+    Vit: 188
+    Int: 166
+    Dex: 255
+    Luk: 90
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 135
+    AttackDelay: 874
+    AttackMotion: 1344
+    DamageMotion: 576
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Incant_Samurai_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21339
+    AegisName: MD_T_TOAD
+    Name: Toad
+    Level: 127
+    Hp: 660000
+    Attack: 700
+    Attack2: 190
+    Defense: 48
+    MagicDefense: 12
+    Str: 132
+    Agi: 119
+    Vit: 127
+    Int: 110
+    Dex: 124
+    Luk: 55
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Fish
+    Element: Water
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1236
+    AttackMotion: 336
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Toad_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21340
+    AegisName: MD_T_OSIRIS
+    Name: Osiris
+    Level: 168
+    Hp: 47584000
+    Attack: 6980
+    Attack2: 3506
+    Defense: 172
+    MagicDefense: 164
+    Str: 197
+    Agi: 199
+    Vit: 186
+    Int: 231
+    Dex: 245
+    Luk: 67
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 384
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Osiris_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21341
+    AegisName: MD_T_PHARAOH
+    Name: Pharaoh
+    Level: 185
+    Hp: 50000000
+    Attack: 6624
+    Attack2: 3782
+    Defense: 248
+    MagicDefense: 538
+    Str: 198
+    Agi: 202
+    Vit: 196
+    Int: 242
+    Dex: 244
+    Luk: 102
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 125
+    AttackDelay: 868
+    AttackMotion: 768
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Pharaoh_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21342
+    AegisName: MD_T_AMON_RA
+    Name: Amon Ra
+    Level: 169
+    Hp: 31900000
+    Attack: 3090
+    Attack2: 5052
+    Defense: 426
+    MagicDefense: 246
+    Str: 186
+    Agi: 189
+    Vit: 220
+    Int: 231
+    Dex: 201
+    Luk: 92
+    AttackRange: 3
+    SkillRange: 14
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 170
+    AttackDelay: 854
+    AttackMotion: 2016
+    DamageMotion: 480
+    Ai: 10
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Rojerta_Piece
+        Rate: 7760
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Amon_Ra_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21343
+    AegisName: MD_T_DARK_SNAKE_LORD
+    Name: Evil Snake Lord
+    Level: 205
+    Hp: 41010000
+    Attack: 7882
+    Attack2: 5986
+    Defense: 628
+    MagicDefense: 375
+    Str: 222
+    Agi: 272
+    Vit: 207
+    Int: 235
+    Dex: 296
+    Luk: 128
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Ghost
+    ElementLevel: 3
+    WalkSpeed: 200
+    AttackDelay: 588
+    AttackMotion: 816
+    DamageMotion: 420
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Taegeuk_Plate
+        Rate: 5820
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Dark_Snake_Lord_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21344
+    AegisName: MD_T_ARCHANGELING
+    Name: Arc Angeling
+    JapaneseName: Archangeling
+    Level: 184
+    Hp: 25100000
+    Attack: 1593
+    Attack2: 600
+    Defense: 184
+    MagicDefense: 162
+    Str: 132
+    Agi: 148
+    Vit: 162
+    Int: 199
+    Dex: 199
+    Luk: 105
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 3
+    WalkSpeed: 180
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Leaf_Of_Yggdrasil
+        Rate: 1800
+      - Item: Seed_Of_Yggdrasil
+        Rate: 150
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Archangeling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21345
+    AegisName: MD_T_DEVILING
+    Name: Deviling
+    Level: 166
+    Hp: 1689000
+    Attack: 3130
+    Attack2: 1830
+    Defense: 134
+    MagicDefense: 140
+    Str: 148
+    Agi: 150
+    Vit: 133
+    Int: 175
+    Dex: 177
+    Luk: 200
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 1072
+    AttackMotion: 1056
+    DamageMotion: 384
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Blade_Lost_In_Darkness
+        Rate: 1
+      - Item: Deviling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21346
+    AegisName: MD_T_ANGELING
+    Name: Angeling
+    Level: 177
+    Hp: 1980000
+    Attack: 391
+    Attack2: 145
+    Defense: 72
+    MagicDefense: 238
+    Str: 158
+    Agi: 150
+    Vit: 133
+    Int: 205
+    Dex: 167
+    Luk: 200
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 200
+    AttackDelay: 1072
+    AttackMotion: 672
+    DamageMotion: 672
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Angeling_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21347
+    AegisName: MD_T_GHOSTRING
+    Name: Ghostring
+    Level: 190
+    Hp: 2670000
+    Attack: 2385
+    Attack2: 1624
+    Defense: 88
+    MagicDefense: 72
+    Str: 166
+    Agi: 185
+    Vit: 166
+    Int: 166
+    Dex: 199
+    Luk: 166
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 300
+    AttackDelay: 1220
+    AttackMotion: 1080
+    DamageMotion: 648
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Ghostring_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21348
+    AegisName: MD_T_B_YGNIZEM
+    Name: Egnigem Cenia
+    JapaneseName: Ygnizem
+    Level: 211
+    Hp: 29100880
+    Attack: 9986
+    Attack2: 7351
+    Defense: 746
+    MagicDefense: 350
+    Str: 288
+    Agi: 277
+    Vit: 265
+    Int: 242
+    Dex: 285
+    Luk: 105
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 1008
+    AttackMotion: 864
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Old_Violet_Box
+        Rate: 5500
+      - Item: Old_Blue_Box
+        Rate: 5000
+      - Item: Crystal_Jewel__
+        Rate: 2000
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: B_Ygnizem_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21349
+    AegisName: MD_T_DOPPELGANGER
+    Name: Doppelganger
+    Level: 177
+    Hp: 38000000
+    Attack: 5103
+    Attack2: 3176
+    Defense: 492
+    MagicDefense: 172
+    Str: 222
+    Agi: 222
+    Vit: 205
+    Int: 167
+    Dex: 269
+    Luk: 72
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 480
+    AttackMotion: 480
+    DamageMotion: 288
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Doppelganger_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21350
+    AegisName: MD_T_ATROCE
+    Name: Atroce
+    Level: 213
+    Hp: 15020000
+    Attack: 7843
+    Attack2: 4503
+    Defense: 632
+    MagicDefense: 352
+    Str: 221
+    Agi: 265
+    Vit: 235
+    Int: 199
+    Dex: 252
+    Luk: 113
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Brute
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 150
+    AttackDelay: 576
+    AttackMotion: 600
+    DamageMotion: 240
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Atroce_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21351
+    AegisName: MD_T_ORK_HERO
+    Name: Orc Hero
+    Level: 150
+    Hp: 36200000
+    Attack: 2662
+    Attack2: 3441
+    Defense: 394
+    MagicDefense: 140
+    Str: 197
+    Agi: 182
+    Vit: 207
+    Int: 171
+    Dex: 244
+    Luk: 86
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 1678
+    AttackMotion: 780
+    DamageMotion: 648
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Voucher_Of_Orcish_Hero
+        Rate: 9700
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Orc_Hero_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21352
+    AegisName: MD_T_ORC_LORD
+    Name: Orc Lord
+    Level: 155
+    Hp: 55200000
+    Attack: 2780
+    Attack2: 3648
+    Defense: 256
+    MagicDefense: 92
+    Str: 195
+    Agi: 195
+    Vit: 203
+    Int: 196
+    Dex: 255
+    Luk: 105
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 1248
+    AttackMotion: 500
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Orc_Load_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21353
+    AegisName: MD_T_BAPHOMET
+    Name: Baphomet
+    Level: 181
+    Hp: 66800000
+    JobExp: 334106
+    Attack: 6150
+    Attack2: 3984
+    Defense: 558
+    MagicDefense: 90
+    Str: 220
+    Agi: 225
+    Vit: 130
+    Int: 185
+    Dex: 255
+    Luk: 185
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Dark
+    ElementLevel: 3
+    WalkSpeed: 100
+    AttackDelay: 768
+    AttackMotion: 768
+    DamageMotion: 576
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Baphomet_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21354
+    AegisName: MD_T_DARK_LORD
+    Name: Dark Lord
+    Level: 196
+    Hp: 11909000
+    Attack: 7935
+    Attack2: 4585
+    Defense: 660
+    MagicDefense: 326
+    Str: 218
+    Agi: 236
+    Vit: 254
+    Int: 242
+    Dex: 261
+    Luk: 126
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 868
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Dark_Lord_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21355
+    AegisName: MD_T_FALLINGBISHOP
+    Name: Falling Bishop
+    JapaneseName: Fallen Bishop
+    Level: 218
+    Hp: 56550000
+    Attack: 9290
+    Attack2: 5636
+    Defense: 548
+    MagicDefense: 364
+    Str: 286
+    Agi: 165
+    Vit: 195
+    Int: 326
+    Dex: 282
+    Luk: 126
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demon
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 432
+    AttackMotion: 432
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    MvpDrops:
+      - Item: Yggdrasilberry
+        Rate: 5500
+      - Item: Old_Violet_Box
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 5000
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Fallen_Bishop_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21356
+    AegisName: MD_T_IFRIT
+    Name: Ifrit
+    Level: 246
+    Hp: 69350000
+    Attack: 12063
+    Attack2: 6389
+    Str: 280
+    Agi: 201
+    Vit: 256
+    Int: 290
+    Dex: 299
+    Luk: 177
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Formless
+    Element: Fire
+    ElementLevel: 4
+    WalkSpeed: 130
+    AttackDelay: 212
+    AttackMotion: 384
+    DamageMotion: 360
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Ifrit_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21357
+    AegisName: MD_T_RANDGRIS
+    Name: Valkyrie Randgris
+    Level: 241
+    Hp: 22050000
+    Attack: 12343
+    Attack2: 8412
+    Defense: 1172
+    MagicDefense: 1012
+    Str: 296
+    Agi: 231
+    Vit: 225
+    Int: 376
+    Dex: 267
+    Luk: 156
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Angel
+    Element: Holy
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 576
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Valhalla_Flower
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
+      - Item: Bloody_Edge
+        Rate: 2500
+      - Item: Randgris_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 21358
+    AegisName: MD_T_BEELZEBUB
+    Name: Beelzebub
+    Level: 247
+    Hp: 68050000
+    Attack: 11250
+    Attack2: 4100
+    Defense: 576
+    MagicDefense: 530
+    Str: 255
+    Agi: 335
+    Vit: 300
+    Int: 325
+    Dex: 304
+    Luk: 126
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 100
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+  - Id: 20112
+    AegisName: MD_MANHOLE
+    Name: Second Phase Trap
+    Level: 1
+    Attack: 1
+    Attack2: 1
+    Defense: 1
+    MagicDefense: 1
+    Size: Small
+    Race: Formless
+    Element: Neutral
+    ElementLevel: 1
+    WalkSpeed: 200
+    AttackDelay: 1
+    AttackMotion: 1
+    DamageMotion: 1
+  - Id: 21359
+    AegisName: MD_T_BEELZEBUB_
+    Name: Beelzebub
+    Level: 247
+    Hp: 68050000
+    Attack: 11250
+    Attack2: 4100
+    Defense: 576
+    MagicDefense: 530
+    Str: 255
+    Agi: 335
+    Vit: 300
+    Int: 325
+    Dex: 304
+    Luk: 126
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Demon
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 100
+    AttackDelay: 100
+    AttackMotion: 576
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Dust
+        Rate: 5000
+      - Item: Meteorite_Fragment
+        Rate: 1000
