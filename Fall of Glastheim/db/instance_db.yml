@@ -1,0 +1,25 @@
+Header:
+  Type: INSTANCE_DB
+  Version: 1
+  
+Body:
+  - Id: 62
+    Name: Glastheim Purification
+    Enter:
+      Map: 1@gl_prq
+      X: 79
+      Y: 22
+      
+  - Id: 63
+    Name: Glastheim Purification Hard
+    Enter:
+      Map: 1@gl_prq
+      X: 79
+      Y: 22
+      
+  - Id: 64
+    Name: Glastheim Fall
+    Enter:
+      Map: 1@gl_prq
+      X: 299
+      Y: 18

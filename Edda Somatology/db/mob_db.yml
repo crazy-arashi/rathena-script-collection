@@ -1,0 +1,351 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Monster Database
+###########################################################################
+#
+# Monster Settings
+#
+###########################################################################
+# - Id                      Monster ID.
+#   AegisName               Server name to reference the monster in scripts and lookups, should use no spaces.
+#   Name                    Name in English.
+#   JapaneseName            Name in Japanese. (Default: 'Name' value)
+#   Level                   Level. (Default: 1)
+#   Hp                      Total HP. (Default: 1)
+#   Sp                      Total SP. (Default: 1)
+#   BaseExp                 Base experience gained. (Default: 0)
+#   JobExp                  Job experience gained. (Default: 0)
+#   MvpExp                  MVP experience gained. (Default: 0)
+#   Attack                  Minimum attack in pre-renewal and base attack in renewal. (Default: 0)
+#   Attack2                 Maximum attack in pre-renewal and base magic attack in renewal. (Default: 0)
+#   Defense                 Physical defense of the monster, reduces melee and ranged physical attack/skill damage. (Default: 0)
+#   MagicDefense            Magic defense of the monster, reduces magical skill damage. (Default: 0)
+#   Str                     Strength which affects attack. (Default: 1)
+#   Agi                     Agility which affects flee. (Default: 1)
+#   Vit                     Vitality which affects defense. (Default: 1)
+#   Int                     Intelligence which affects magic attack. (Default: 1)
+#   Dex                     Dexterity which affects hit rate. (Default: 1)
+#   Luk                     Luck which affects perfect dodge/lucky flee/lerfect flee/lucky dodge rate. (Default: 1)
+#   AttackRange             Attack range. (Default: 0)
+#   SkillRange              Skill cast range. (Default: 0)
+#   ChaseRange              Chase range. (Default: 0)
+#   Size                    Size. (Default: Small)
+#   Race                    Race. (Default: Formless)
+#   RaceGroups:             List of secondary groups the monster may be part of. (Optional)
+#     <group>: <value>      Group to toggle.
+#   Element                 Element. (Default: Neutral)
+#   ElementLevel            Level of element. (Default: 1)
+#   WalkSpeed               Walk speed. (Default: DEFAULT_WALK_SPEED)
+#   AttackDelay             Attack speed. (Default: 0)
+#   AttackMotion            Attack animation speed. (Default: 0)
+#   DamageMotion            Damage animation speed. (Default: 0)
+#   DamageTaken             Rate at which the monster will receive incoming damage. (Default: 100)
+#   Ai                      Aegis monster type AI behavior. (Default: 06)
+#   Class                   Aegis monster class. (Default: Normal)
+#   Modes:                  List of unique behavior not defined by AI, Class, or Attribute. (Optional)
+#     <mode>: <value>       Mode to toggle.
+#   MvpDrops:               List of possible MVP prize items. Max of MAX_MVP_DROP. (Optional)
+#     - Item                Item name.
+#       Rate                Drop rate of item.
+#       RandomOptionGroup   Random Option Group applied to item on drop. (Default: None)
+#       Index               Index used for overwriting item. (Optional)
+#   Drops:                  List of possible normal item drops. Max of MAX_MOB_DROP. (Optional)
+#     - Item                Item name.
+#       Rate                Drop rate of item.
+#       StealProtected      If the item is shielded from TF_STEAL. (Default: false)
+#       RandomOptionGroup   Random Option Group applied to item on drop. (Default: None)
+#       Index               Index used for overwriting item. (Optional)
+###########################################################################
+
+Header:
+  Type: MOB_DB
+  Version: 1
+
+Body:
+  - Id: 20536
+    AegisName: MD_ED_B_YGNIZEM
+    Name: Nameless Swordsman
+    Level: 180
+    Hp: 15000000
+    Attack: 5030
+    Attack2: 7451
+    Defense: 585
+    MagicDefense: 235
+    Str: 290
+    Agi: 227
+    Vit: 254
+    Int: 219
+    Dex: 429
+    Luk: 196
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 421
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 09
+    Class: Boss
+    Modes:
+      Assist: true
+      FixedItemDrop: true
+      Mvp: true
+    Drops:
+      - Item: Somatology_Data_Box
+        Rate: 2000
+      - Item: Somatology_Material_Box
+        Rate: 2000
+      - Item: Subject_Aura
+        Rate: 10
+  - Id: 20537
+    AegisName: MD_ED_YGNIZEM
+    Name: Nameless Swordsman
+    Level: 176
+    Hp: 1519762
+    Attack: 4422
+    Attack2: 6573
+    Defense: 340
+    MagicDefense: 109
+    Str: 246
+    Agi: 207
+    Vit: 216
+    Int: 186
+    Dex: 364
+    Luk: 81
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Fire
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 576
+    AttackMotion: 432
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Silent_Energy_Particle
+        Rate: 100
+  - Id: 20538
+    AegisName: MD_ED_EREND
+    Name: Nameless Acolyte
+    Level: 176
+    Hp: 1500487
+    Attack: 3085
+    Attack2: 4485
+    Defense: 278
+    MagicDefense: 113
+    Str: 109
+    Agi: 81
+    Vit: 127
+    Int: 205
+    Dex: 185
+    Luk: 81
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Holy
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 532
+    AttackMotion: 400
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Silent_Energy_Particle
+        Rate: 100
+  - Id: 20539
+    AegisName: MD_ED_ARMAIA
+    Name: Nameless Merchant
+    Level: 175
+    Hp: 1507840
+    Attack: 3951
+    Attack2: 5751
+    Defense: 397
+    MagicDefense: 103
+    Str: 176
+    Agi: 73
+    Vit: 121
+    Int: 93
+    Dex: 206
+    Luk: 81
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 576
+    AttackMotion: 400
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Silent_Energy_Particle
+        Rate: 100
+  - Id: 20540
+    AegisName: MD_ED_EREMES
+    Name: Eremes Guile
+    Level: 178
+    Hp: 1518427
+    Attack: 3156
+    Attack2: 4567
+    Defense: 313
+    MagicDefense: 102
+    Str: 189
+    Agi: 160
+    Vit: 77
+    Int: 87
+    Dex: 249
+    Luk: 93
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Poison
+    ElementLevel: 4
+    WalkSpeed: 120
+    AttackDelay: 86
+    AttackMotion: 384
+    DamageMotion: 288
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Silent_Energy_Particle
+        Rate: 100
+  - Id: 20541
+    AegisName: MD_ED_LGTHIGHGUARD
+    Name: Senior Rekenber Guard
+    Level: 174
+    Hp: 1485755
+    Attack: 3161
+    Attack2: 4561
+    Defense: 339
+    MagicDefense: 98
+    Str: 187
+    Agi: 217
+    Vit: 87
+    Int: 110
+    Dex: 251
+    Luk: 106
+    AttackRange: 9
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 854
+    AttackMotion: 276
+    DamageMotion: 264
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Yggdrasilberry
+        Rate: 25
+      - Item: Seed_Of_Yggdrasil
+        Rate: 50
+  - Id: 20542
+    AegisName: MD_ED_LGTGUARD
+    Name: Rekenber Guard
+    Level: 176
+    Hp: 1475486
+    Attack: 3069
+    Attack2: 4509
+    Defense: 346
+    MagicDefense: 96
+    Str: 207
+    Agi: 100
+    Vit: 75
+    Int: 110
+    Dex: 251
+    Luk: 88
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 851
+    AttackMotion: 360
+    DamageMotion: 140
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Yggdrasilberry
+        Rate: 25
+      - Item: Seed_Of_Yggdrasil
+        Rate: 50
+  - Id: 20543
+    AegisName: MD_ED_M_SCIENCE
+    Name: Regenschirm Scientist
+    Level: 172
+    Hp: 1469107
+    Attack: 2950
+    Attack2: 4292
+    Defense: 346
+    MagicDefense: 96
+    Str: 94
+    Agi: 96
+    Vit: 91
+    Int: 277
+    Dex: 246
+    Luk: 94
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Demihuman
+    Element: Neutral
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 864
+    AttackMotion: 267
+    DamageMotion: 146
+    Ai: 09
+    Modes:
+      Assist: true
+    Drops:
+      - Item: Yggdrasilberry
+        Rate: 25
+      - Item: Seed_Of_Yggdrasil
+        Rate: 50
+      - Item: Lab_Staff_Record
+        Rate: 1000

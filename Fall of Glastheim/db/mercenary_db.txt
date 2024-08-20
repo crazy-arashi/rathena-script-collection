@@ -1,0 +1,7 @@
+// Mercenary Database
+//
+// Structure of Database:
+// ID,Sprite_Name,Name,LV,HP,SP,Range1,ATK1,ATK2,DEF,MDEF,STR,AGI,VIT,INT,DEX,LUK,Range2,Range3,Scale,Race,Element,Speed,aDelay,aMotion,dMotion
+
+20385,MD_GH_KING_SCHMIDT,King Schmidt,130,675000,1,1,1667,2778,82,155,98,55,84,75,147,18,10,12,1,7,20,175,100,1000,250
+

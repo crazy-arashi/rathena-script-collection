@@ -1,0 +1,13 @@
+Header:
+  Type: INSTANCE_DB
+  Version: 1
+
+Body:
+  - Id: 65
+    Name: Journey of Expedition
+    Enter:
+      Map: 1@gol1
+      X: 198
+      Y: 35
+    AdditionalMaps:
+       1@gol2: true

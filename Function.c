@@ -45,7 +45,7 @@ function	script	getnpc_array	{
 		return 0;
 	}
 	for(.@i = 0; .@i < .@size; .@i++)
-		set getelementofarray(getarg(1),.@i),getd(".@temp_array" + (compare(getarg(0),"$")?"$":"") + "[" + .@i + "]");
+		set getelementofarray(getarg(1),.@i),getd(".@temp_array" + .@type$ + "[" + .@i + "]");
 	return .@size;
 }
 
