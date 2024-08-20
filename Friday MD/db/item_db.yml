@@ -1,0 +1,10 @@
+Header:
+  Type: ITEM_DB
+  Version: 1
+
+Body:
+  - Id: 25235
+    AegisName: StoneForWork
+    Name: Crafted Stone
+    Type: Etc
+    Weight: 0

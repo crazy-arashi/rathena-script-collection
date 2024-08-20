@@ -1,0 +1,9 @@
+Header:
+  Type: QUEST_DB
+  Version: 1
+
+Body:
+    #Friday MD
+  - Id: 12379
+    Title: Friday MD Standby
+    TimeLimit: 4h

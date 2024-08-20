@@ -1,0 +1,678 @@
+# This file is a part of rAthena.
+#   Copyright(C) 2021 rAthena Development Team
+#   https://rathena.org - https://github.com/rathena
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+###########################################################################
+# Monster Database
+###########################################################################
+#
+# Monster Settings
+#
+###########################################################################
+# - Id                      Monster ID.
+#   AegisName               Server name to reference the monster in scripts and lookups, should use no spaces.
+#   Name                    Name in English.
+#   JapaneseName            Name in Japanese. (Default: 'Name' value)
+#   Level                   Level. (Default: 1)
+#   Hp                      Total HP. (Default: 1)
+#   Sp                      Total SP. (Default: 1)
+#   BaseExp                 Base experience gained. (Default: 0)
+#   JobExp                  Job experience gained. (Default: 0)
+#   MvpExp                  MVP experience gained. (Default: 0)
+#   Attack                  Minimum attack in pre-renewal and base attack in renewal. (Default: 0)
+#   Attack2                 Maximum attack in pre-renewal and base magic attack in renewal. (Default: 0)
+#   Defense                 Physical defense of the monster, reduces melee and ranged physical attack/skill damage. (Default: 0)
+#   MagicDefense            Magic defense of the monster, reduces magical skill damage. (Default: 0)
+#   Str                     Strength which affects attack. (Default: 1)
+#   Agi                     Agility which affects flee. (Default: 1)
+#   Vit                     Vitality which affects defense. (Default: 1)
+#   Int                     Intelligence which affects magic attack. (Default: 1)
+#   Dex                     Dexterity which affects hit rate. (Default: 1)
+#   Luk                     Luck which affects perfect dodge/lucky flee/lerfect flee/lucky dodge rate. (Default: 1)
+#   AttackRange             Attack range. (Default: 0)
+#   SkillRange              Skill cast range. (Default: 0)
+#   ChaseRange              Chase range. (Default: 0)
+#   Size                    Size. (Default: Small)
+#   Race                    Race. (Default: Formless)
+#   RaceGroups:             List of secondary groups the monster may be part of. (Optional)
+#     <group>: <value>      Group to toggle.
+#   Element                 Element. (Default: Neutral)
+#   ElementLevel            Level of element. (Default: 1)
+#   WalkSpeed               Walk speed. (Default: DEFAULT_WALK_SPEED)
+#   AttackDelay             Attack speed. (Default: 0)
+#   AttackMotion            Attack animation speed. (Default: 0)
+#   DamageMotion            Damage animation speed. (Default: 0)
+#   Ai                      Aegis monster type AI behavior. (Default: 06)
+#   Class                   Aegis monster class. (Default: Normal)
+#   Modes:                  List of unique behavior not defined by AI, Class, or Attribute. (Optional)
+#     <mode>: <value>       Mode to toggle.
+#   MvpDrops:               List of possible MVP prize items. Max of MAX_MVP_DROP. (Optional)
+#     - Item                Item name.
+#       Rate                Drop rate of item.
+#       RandomOptionGroup   Random Option Group applied to item on drop. (Default: None)
+#       Index               Index used for overwriting item. (Optional)
+#   Drops:                  List of possible normal item drops. Max of MAX_MOB_DROP. (Optional)
+#     - Item                Item name.
+#       Rate                Drop rate of item.
+#       StealProtected      If the item is shielded from TF_STEAL. (Default: false)
+#       RandomOptionGroup   Random Option Group applied to item on drop. (Default: None)
+#       Index               Index used for overwriting item. (Optional)
+###########################################################################
+
+Header:
+  Type: MOB_DB
+  Version: 1
+
+Body:
+  - Id: 2495
+    AegisName: HIDDEN_MOB2
+    Name: Hidden Mob
+    Level: 151
+    Hp: 10000
+    Sp: 200
+    Attack2: 1000
+    Defense: 200
+    MagicDefense: 10
+    Str: 200
+    Agi: 200
+    Vit: 200
+    Int: 200
+    Dex: 200
+    Luk: 200
+    AttackRange: 7
+    SkillRange: 12
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Ghost
+    ElementLevel: 4
+    WalkSpeed: 1000
+    AttackMotion: 1000
+    Ai: 10
+    Modes:
+      IgnoreMagic: true
+      IgnoreMelee: true
+      IgnoreMisc: true
+      IgnoreRanged: true
+      Detector: true
+  - Id: 3139
+    AegisName: MG_ZOMBIE_H
+    Name: Corrupted Steward
+    Level: 160
+    Hp: 271200
+    BaseExp: 53332
+    JobExp: 55998
+    Attack: 3986
+    Attack2: 5877
+    Defense: 15
+    MagicDefense: 15
+    Str: 44
+    Agi: 22
+    Vit: 77
+    Int: 25
+    Dex: 88
+    Luk: 22
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 400
+    AttackDelay: 2612
+    AttackMotion: 912
+    DamageMotion: 288
+    Ai: 04
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 1000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 1000
+      - Item: Coagulated_Spell
+        Rate: 10
+      - Item: Sticky_Mucus
+        Rate: 1000
+      - Item: White_Jewel
+        Rate: 500
+  - Id: 3140
+    AegisName: MG_WRAITH_H
+    Name: Corrupted Monk
+    Level: 163
+    Hp: 200336
+    BaseExp: 53998
+    JobExp: 56796
+    Attack: 1777
+    Attack2: 2576
+    Defense: 80
+    MagicDefense: 200
+    Str: 16
+    Agi: 26
+    Vit: 30
+    Int: 115
+    Dex: 79
+    Luk: 5
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 350
+    AttackDelay: 1816
+    AttackMotion: 576
+    DamageMotion: 240
+    Ai: 21
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 1000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 1000
+      - Item: Coagulated_Spell
+        Rate: 10
+      - Item: Wedding_Veil
+        Rate: 100
+      - Item: Crystal_Jewel_
+        Rate: 100
+      - Item: Crystal_Mirror
+        Rate: 500
+  - Id: 3141
+    AegisName: MG_GHOUL_H
+    Name: Grand Chamberlain in pain
+    JapaneseName: Grand Chamberlain
+    Level: 162
+    Hp: 416200
+    BaseExp: 54222
+    JobExp: 57066
+    Attack: 4994
+    Attack2: 7366
+    Defense: 30
+    MagicDefense: 30
+    Str: 88
+    Agi: 44
+    Vit: 88
+    Int: 21
+    Dex: 95
+    Luk: 44
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 300
+    AttackDelay: 2456
+    AttackMotion: 912
+    DamageMotion: 504
+    Ai: 04
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 1000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 1000
+      - Item: Coagulated_Spell
+        Rate: 10
+      - Item: Oridecon_Stone
+        Rate: 100
+      - Item: Skul_Ring
+        Rate: 100
+      - Item: Old_White_Cloth
+        Rate: 1000
+  - Id: 3142
+    AegisName: MG_ARCLOUSE_H
+    Name: Maggot
+    Level: 163
+    Hp: 161622
+    BaseExp: 62
+    JobExp: 66
+    Attack: 2216
+    Attack2: 3213
+    Defense: 121
+    MagicDefense: 36
+    Str: 60
+    Agi: 103
+    Vit: 45
+    Int: 35
+    Dex: 172
+    Luk: 15
+    AttackRange: 1
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Small
+    Race: Insect
+    Element: Earth
+    ElementLevel: 2
+    WalkSpeed: 100
+    AttackDelay: 960
+    AttackMotion: 500
+    DamageMotion: 480
+    Ai: 09
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 1000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 1000
+      - Item: Coagulated_Spell
+        Rate: 10
+      - Item: Round_Shell
+        Rate: 3000
+      - Item: Great_Nature
+        Rate: 100
+  - Id: 3143
+    AegisName: MG_RAYDRIC_H
+    Name: Corrupted Palace Guard
+    Level: 165
+    Hp: 368160
+    BaseExp: 56306
+    JobExp: 10944
+    Attack: 5390
+    Attack2: 7923
+    Defense: 89
+    MagicDefense: 15
+    Str: 159
+    Agi: 87
+    Vit: 66
+    Int: 33
+    Dex: 106
+    Luk: 27
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 150
+    AttackDelay: 824
+    AttackMotion: 780
+    DamageMotion: 420
+    Ai: 09
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 1000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 1000
+      - Item: Coagulated_Spell
+        Rate: 10
+      - Item: Brigan
+        Rate: 3000
+      - Item: Elunium
+        Rate: 50
+      - Item: Plate_Armor
+        Rate: 200
+  - Id: 3144
+    AegisName: MG_RAYDRIC_ARCHER_H
+    Name: Wandering Archer
+    Level: 166
+    Hp: 288740
+    BaseExp: 54248
+    JobExp: 13378
+    Attack: 6444
+    Attack2: 9557
+    Defense: 63
+    MagicDefense: 40
+    Str: 53
+    Agi: 24
+    Vit: 40
+    Int: 15
+    Dex: 156
+    Luk: 30
+    AttackRange: 14
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Dark
+    ElementLevel: 2
+    WalkSpeed: 200
+    AttackDelay: 1152
+    AttackMotion: 1152
+    DamageMotion: 480
+    Ai: 05
+    Modes:
+      Detector: true
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 1000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 1000
+      - Item: Coagulated_Spell
+        Rate: 10
+      - Item: Brigan
+        Rate: 3000
+      - Item: Elunium
+        Rate: 50
+      - Item: Tights
+        Rate: 200
+  - Id: 3145
+    AegisName: MG_KNIGHT_OF_ABYSS_H
+    Name: Corrupted Abysmal Knight
+    JapaneseName: Corrupted Knight of Abyss
+    Level: 172
+    Hp: 451578
+    BaseExp: 58584
+    JobExp: 56576
+    Attack: 5413
+    Attack2: 7973
+    Defense: 102
+    MagicDefense: 50
+    Str: 121
+    Agi: 55
+    Vit: 99
+    Int: 70
+    Dex: 126
+    Luk: 37
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 300
+    AttackDelay: 1000
+    AttackMotion: 500
+    DamageMotion: 1000
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 3000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 2000
+      - Item: Coagulated_Spell
+        Rate: 50
+      - Item: Reins
+        Rate: 5000
+      - Item: Patriotism_Marks
+        Rate: 10
+      - Item: Full_Plate_Armor
+        Rate: 200
+  - Id: 3146
+    AegisName: MG_KHALITZBURG_H
+    Name: Suffering Khalitzburg
+    Level: 173
+    Hp: 473702
+    BaseExp: 57542
+    JobExp: 54662
+    Attack: 4774
+    Attack2: 7014
+    Defense: 125
+    MagicDefense: 10
+    Str: 121
+    Agi: 142
+    Vit: 55
+    Int: 81
+    Dex: 105
+    Luk: 32
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Undead
+    ElementLevel: 1
+    WalkSpeed: 350
+    AttackMotion: 1000
+    DamageMotion: 396
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 3000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 2000
+      - Item: Coagulated_Spell
+        Rate: 50
+      - Item: Elunium
+        Rate: 50
+      - Item: Patriotism_Marks
+        Rate: 10
+      - Item: Lapier
+        Rate: 300
+  - Id: 3147
+    AegisName: MG_BLOODY_KNIGHT_H
+    Name: Bloody Knight
+    Level: 173
+    Hp: 493502
+    BaseExp: 60448
+    JobExp: 61882
+    Attack: 3314
+    Attack2: 4819
+    Defense: 122
+    MagicDefense: 300
+    Str: 132
+    Agi: 55
+    Vit: 89
+    Int: 151
+    Dex: 137
+    Luk: 45
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Dark
+    ElementLevel: 4
+    WalkSpeed: 250
+    AttackDelay: 828
+    AttackMotion: 528
+    DamageMotion: 192
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 3000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 2000
+      - Item: Coagulated_Spell
+        Rate: 50
+      - Item: Brigan
+        Rate: 5000
+      - Item: Broad_Sword
+        Rate: 100
+      - Item: Two_Hand_Sword
+        Rate: 100
+  - Id: 3148
+    AegisName: MG_M_UNDEAD_KNIGHT_H
+    Name: Commander of Destruction
+    Level: 175
+    Hp: 1900070
+    BaseExp: 560018
+    JobExp: 535184
+    Attack: 5653
+    Attack2: 8310
+    Defense: 80
+    MagicDefense: 150
+    Str: 165
+    Agi: 82
+    Vit: 110
+    Int: 122
+    Dex: 154
+    Luk: 52
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 130
+    AttackDelay: 350
+    AttackMotion: 864
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 5000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 5000
+      - Item: Coagulated_Spell
+        Rate: 50
+      - Item: Alca_Bringer
+        Rate: 10
+      - Item: Claymore
+        Rate: 100
+      - Item: Halberd
+        Rate: 200
+      - Item: UndeadKnightM_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 3149
+    AegisName: MG_F_UNDEAD_KNIGHT_H
+    Name: Commander of Destruction
+    Level: 175
+    Hp: 1696020
+    BaseExp: 559672
+    JobExp: 520398
+    Attack: 5274
+    Attack2: 7746
+    Defense: 80
+    MagicDefense: 180
+    Str: 155
+    Agi: 88
+    Vit: 110
+    Int: 135
+    Dex: 154
+    Luk: 59
+    AttackRange: 2
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Medium
+    Race: Undead
+    Element: Undead
+    ElementLevel: 2
+    WalkSpeed: 120
+    AttackDelay: 350
+    AttackMotion: 768
+    DamageMotion: 480
+    Ai: 21
+    Class: Boss
+    Drops:
+      - Item: Glast_Decayed_Nail
+        Rate: 5000
+      - Item: Glast_Horrendous_Mouth
+        Rate: 5000
+      - Item: Coagulated_Spell
+        Rate: 50
+      - Item: Claymore
+        Rate: 100
+      - Item: Holy_Avenger
+        Rate: 50
+      - Item: UndeadKnightF_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 3150
+    AegisName: MG_AMDARAIS_H
+    Name: Amdarias
+    Level: 180
+    Hp: 42900000
+    BaseExp: 5291324
+    JobExp: 5197024
+    Attack: 8899
+    Attack2: 13131
+    Defense: 30
+    MagicDefense: 40
+    Str: 255
+    Agi: 39
+    Vit: 90
+    Int: 169
+    Dex: 166
+    Luk: 20
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Undead
+    Element: Undead
+    ElementLevel: 4
+    WalkSpeed: 120
+    AttackDelay: 312
+    AttackMotion: 1200
+    DamageMotion: 432
+    Ai: 21
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Old_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 10000
+      - Item: Temporal_Crystal
+        Rate: 5000
+      - Item: Yggdrasilberry
+        Rate: 10000
+      - Item: Death_Guidance
+        Rate: 1000
+      - Item: Patriotism_Marks
+        Rate: 10000
+      - Item: AmdaraisH_Card
+        Rate: 1
+        StealProtected: true
+  - Id: 3151
+    AegisName: MG_CORRUPTION_ROOT_H
+    Name: Corruption Root
+    Level: 180
+    Hp: 18200000
+    BaseExp: 2199906
+    JobExp: 2008478
+    Attack: 6887
+    Attack2: 9774
+    Defense: 333
+    MagicDefense: 333
+    Str: 201
+    Agi: 20
+    Vit: 90
+    Int: 201
+    Dex: 201
+    Luk: 20
+    AttackRange: 3
+    SkillRange: 10
+    ChaseRange: 12
+    Size: Large
+    Race: Demon
+    Element: Earth
+    ElementLevel: 3
+    WalkSpeed: 1000
+    AttackDelay: 576
+    AttackMotion: 672
+    DamageMotion: 480
+    Ai: 10
+    Class: Boss
+    Modes:
+      Mvp: true
+    Drops:
+      - Item: Old_Card_Album
+        Rate: 5000
+      - Item: Old_Violet_Box
+        Rate: 10000
+      - Item: Temporal_Crystal
+        Rate: 5000
+      - Item: Yggdrasilberry
+        Rate: 10000
+      - Item: Alchemy_Glove
+        Rate: 1000
+      - Item: Will_Of_Darkness_
+        Rate: 10000
+      - Item: CorruptionRootH_Card
+        Rate: 1
+        StealProtected: true

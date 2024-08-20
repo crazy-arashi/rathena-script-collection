@@ -6373,6 +6373,7 @@ icecastle,27,126,3	script	Horuru#if19msdq	4_EP19_IWIN,{
 		getitem 1000608,2 + (getreputation("Ice Castle") >= 3000 ? 1 : 0);
 		close3;
 	}
+	/*
 	//Episode 20 Starting
 	if(BaseLevel >= 215 && isbegin_quest(17649) == 2 && isbegin_quest(17690) == 0){
 		mes "[Horuru]";
@@ -6403,6 +6404,7 @@ icecastle,27,126,3	script	Horuru#if19msdq	4_EP19_IWIN,{
 		cloaknpc(strnpcinfo(0),false,getcharid(0));
 		end;
 	}
+	*/
 	switch(checkquest(17662,PLAYTIME)){
 		case -1:
 			break;

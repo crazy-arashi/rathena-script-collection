@@ -1,0 +1,11 @@
+Header:
+  Type: INSTANCE_DB
+  Version: 1
+
+Body:
+  - Id: 65
+    Name: Friday Memorial
+    Enter:
+      Map: 1@md_gef
+      X: 113
+      Y: 129
