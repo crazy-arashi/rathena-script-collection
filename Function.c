@@ -60,11 +60,64 @@ function	script	getnpc_arrindex	{
 	return inarray(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarg(1));
 }
 
+/* Search the index of a value in from another NPC Variable
+** npc_resize(<SIZE>);
+Sizes :
+Size_Small
+Size_Medium
+Size_Large
+
+-- Use Cases
+OnInit:
+OnInstanceInit:
+	npc_resize(Size_Large);
+*/
+
+function	script	npc_resize	{
+	.@npc$ = .@name$ = strnpcinfo(0);
+	if(instance_live_info(ILI_NAME) != "")
+		.@npc$ = instance_npcname(.@npc$);
+	getunitdata getnpcid(0,.@npc$),.@npc;
+	setnpcdisplay(.@npc$,.@name$,.@npc[UNPC_CLASS],getarg(0));
+	return;
+}
+
 /* Instance commands shorcuts
+instance_warning(<TYPE>);
 instance_hide(<NPC Name>,<Bool>);
 instance_enable(<NPC Name>,<Bool>);
 instance_event(<NPC Name>,<Event Name>,<Attach Player Bool>);
 */
+
+function	script	instance_warning	{
+	.@type = (getargcount() < 1 ? 0 : getarg(0));
+	.@md_name$ = (getargcount() == 2 ? getarg(1,"") : "");
+	switch(.@type){
+		case 0: 
+			mes "^FF0000Please note that, any abnormal monster handling inside the instance such as taming is not considered normal and may hinder the instance progress.^000000"; 
+			break;
+			
+		case 1:
+			mes "^4D4DFFThis place is a memorial dungeon.";
+			mes "Please form a party and try again.^000000";
+			mes "To create a party with the following command ^4D4DFF'/organize PARTY NAME'.^000000";
+			end;
+			
+		case 2:
+			dispbottom "The reservation of the instance '" + .@md_name$ + "' has failed due to an active instance.";
+			break;
+			
+		case 3:
+			mes "^FF0000In beginners mode, the player transform into a monster. Please not that existing transformation effect will disappear after entering and proceeding.^000000"; 
+			break;
+			
+		case 4:
+			mes "^4D4DFFThis place is a memorial dungeon.";
+			mes "You have to be a party leader to create a memorial dungeon.^000000";
+			end;
+	}
+	return;
+}
 
 function	script	instance_hide	{
 	if(getarg(1))
@@ -91,6 +144,15 @@ function	script	instance_event	{
 }
 
 // Shorcut/Personal preference functions
+// Gepard function
+function	script	concurrent_uid	{
+	.@uid = get_unique_id();
+	.@size = query_sql("SELECT `account_id` FROM `login` WHERE `last_unique_id` = '" + .@uid + "'", .@aid);
+	if(.@size == 1) return 1;
+	for(.@i = 0; .@i < .@size; .@i++)
+		.@total += query_sql("SELECT * FROM `char` WHERE `account_id` = '" + .@aid[.@i] + "' AND `online` = 1");
+	return .@total;
+}
 
 function	script	cloaknpc	{
 	if(getargcount() > 2){
@@ -113,7 +175,10 @@ function	script	pctalk	{
 }
 
 function	script	pcblock	{
-	setpcblock PCBLOCK_NPC,getarg(0);
+	if(getargcount() < 2)
+		setpcblock PCBLOCK_NPC,getarg(0);
+	else
+		setpcblock PCBLOCK_NPC,getarg(0),getarg(1);
 	return;
 }
 
