@@ -1,12 +1,24 @@
-# Crazyarashi Rathena Script Collection
+## Crazyarashi rAthena Script Collection
+#### A collection of official and custom scripts for [rAthena](https://github.com/rathena/rathena "rAthena Github")
+#### Share it to your friends so they don't get scammed by resellers!
 
-** LOAD THE FUNCTIONS FIRST, NOTHING WOULD WORK WITHOUT IT **
+## How to Use
+- Clone/Download the repository.
+- Load up the [function](https://github.com/crazy-arashi/rathena-script-collection/blob/master/Function.c) first.
+- Load up the script and database included in it.
 
-A collection of some scripts I made.
+## Notes
+- Don't sell or redistribute the scripts.
+- The functions are just shorcuts function which I feel comfortable using.
+- Feel free to create a pull request using this as a base for rAthena, make sure to follow rAthena's scripting standard.
+- The following official scripts will be deleted upon being merged to rAthena.
 
-Feel free to use it and open up issues, I'll fix it when I have time. 
-You can also open up requests in the issues, I'll also do it when I have the time.
-Feel free to modify it and release it with my credits of course.
-
-You may not resell it or redistribute it with your name. 
-
+# Contents
+### Renewal Contents
+- Constellation Tower - Initial Release Version
+- Edda Somatology/Biolaboratory
+- Edda Fall of Glastheim
+- Old Glastheim Hard
+- Tomb of Remorse
+- Thanatos Tower Rework - Instance Only
+- Episode 19 Isgard - [Active Pull Request](https://github.com/rathena/rathena/pull/8527)
