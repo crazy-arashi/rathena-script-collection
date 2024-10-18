@@ -60,28 +60,6 @@ function	script	getnpc_arrindex	{
 	return inarray(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarg(1));
 }
 
-/* Search the index of a value in from another NPC Variable
-** npc_resize(<SIZE>);
-Sizes :
-Size_Small
-Size_Medium
-Size_Large
-
--- Use Cases
-OnInit:
-OnInstanceInit:
-	npc_resize(Size_Large);
-*/
-
-function	script	npc_resize	{
-	.@npc$ = .@name$ = strnpcinfo(0);
-	if(instance_live_info(ILI_NAME) != "")
-		.@npc$ = instance_npcname(.@npc$);
-	getunitdata getnpcid(0,.@npc$),.@npc;
-	setnpcdisplay(.@npc$,.@name$,.@npc[UNPC_CLASS],getarg(0));
-	return;
-}
-
 /* Instance commands shorcuts
 instance_warning(<TYPE>);
 instance_hide(<NPC Name>,<Bool>);
@@ -143,17 +121,7 @@ function	script	instance_event	{
 	return;
 }
 
-// Shorcut/Personal preference functions
-// Gepard function
-function	script	concurrent_uid	{
-	.@uid = get_unique_id();
-	.@size = query_sql("SELECT `account_id` FROM `login` WHERE `last_unique_id` = '" + .@uid + "'", .@aid);
-	if(.@size == 1) return 1;
-	for(.@i = 0; .@i < .@size; .@i++)
-		.@total += query_sql("SELECT * FROM `char` WHERE `account_id` = '" + .@aid[.@i] + "' AND `online` = 1");
-	return .@total;
-}
-
+//= Shortcut Functions
 function	script	cloaknpc	{
 	if(getargcount() > 2){
 		if(getarg(1))
@@ -182,7 +150,102 @@ function	script	pcblock	{
 	return;
 }
 
-//= Cloaked Dummy NPC
+/* Search the index of a value in from another NPC Variable
+** npc_resize(<SIZE>);
+Sizes :
+Size_Small
+Size_Medium
+Size_Large
+
+-- Use Cases
+OnInit:
+OnInstanceInit:
+	npc_resize(Size_Large);
+*/
+
+function	script	npc_resize	{
+	.@npc$ = .@name$ = strnpcinfo(0);
+	if(instance_live_info(ILI_NAME) != "")
+		.@npc$ = instance_npcname(.@npc$);
+	getunitdata getnpcid(0,.@npc$),.@npc;
+	setnpcdisplay(.@npc$,.@name$,.@npc[UNPC_CLASS],getarg(0));
+	return;
+}
+
+function	script	mapexists	{
+	return getmapusers(getarg(0));
+}
+
+/*
+GEPARD FUNCTION
+** get_concurrent_uid({<ACCOUNT ID>});
+** get_concurrent_uid_map({<ACCOUNT ID>,<MAP NAME>})
+
+const values:
+UID_NULL = -1
+UID_NO_CONCURRENT = 0
+*/
+function	script	get_concurrent_uid	{
+	if(getargcount())
+		.@aid = getarg(0);
+	else {
+		if(!playerattached){
+			errormes "get_concurrent_uid : There's no RID attached to the function.";
+			return UID_NULL;
+		}
+		.@aid = getcharid(3);
+	}
+	.@size = query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '" + .@aid + "'", .@uid);
+	if(!.@size){
+		errormes "get_concurrent_uid : There's no UID from the AID : '" + .@aid + "'.";
+		return UID_NULL;
+	}
+	.@aid = .@size = 0;
+	.@size = query_sql("SELECT `account_id` FROM `login` WHERE `last_unique_id` = '" + .@uid + "'", .@aid);
+	if(.@size == 1) return UID_NO_CONCURRENT;
+	for(.@i = 0; .@i < .@size; .@i++)
+		.@total += query_sql("SELECT `char_id` FROM `char` WHERE `account_id` = '" + .@aid[.@i] + "' AND `online` = 1");
+	return .@total;
+}
+
+function	script	concurrent_uid_map	{
+	if(!getargcount()){
+		if(!playerattached){
+			errormes "get_concurrent_uid : There's no RID attached to the function.";
+			return UID_NULL;
+		}
+		.@aid = getcharid(3);
+		.@map$ = strcharinfo(3);
+	} else {
+		.@aid = getarg(0);
+		if(getargcount() > 1)
+			.@map$ = getarg(1);
+		else
+			.@map$ = strcharinfo(3,convertpcinfo(.@aid,CPC_CHAR));
+	}
+	if(mapexists(.@map$) == UID_NULL){
+		errormes "get_concurrent_uid : The map '" + .@map$ + " doesn't exist.";
+		return UID_NULL;
+	}
+	.@size = query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '" + .@aid + "'", .@uid);
+	if(!.@size){
+		errormes "get_concurrent_uid : There's no UID from the AID : '" + .@aid + "'.";
+		return UID_NULL;
+	}
+	.@aid = .@size = 0;
+	.@size = query_sql("SELECT `account_id` FROM `login` WHERE `last_unique_id` = '" + .@uid + "'", .@aid);
+	if(.@size == 1) return UID_NO_CONCURRENT;
+	for(.@i = 0; .@i < .@size; .@i++){
+		query_sql("SELECT `char_id` FROM `char` WHERE `account_id` = '"+.@aid[.@i]+"' AND `online` = 1",.@cid);
+		if(!.@cid) continue;
+		getmapxy(.@m$,.@x,.@y,BL_PC,strcharinfo(0,.@cid));
+		if(.@map$ == .@m$)
+			.@total++;
+	}
+	return .@total;
+}
+
+//= DUMMY NPC's
 -	script	dummynpc	-1,{
 	end;
 	
@@ -191,12 +254,10 @@ OnInit:
 end;
 }
 
-//= Normal Dummy NPC
 -	script	dummynpc2	-1,{ 
 	end; 
 }
 
-//= Disabled Dummy NPC in Instance
 -	script	instancedummynpc	-1,{ 
 	end;
 	
