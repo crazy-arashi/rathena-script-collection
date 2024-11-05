@@ -189,7 +189,7 @@ function	script	get_concurrent_uid	{
 	if(getargcount())
 		.@aid = getarg(0);
 	else {
-		if(!playerattached){
+		if(!playerattached()){
 			errormes "get_concurrent_uid : There's no RID attached to the function.";
 			return UID_NULL;
 		}
@@ -210,7 +210,7 @@ function	script	get_concurrent_uid	{
 
 function	script	concurrent_uid_map	{
 	if(!getargcount()){
-		if(!playerattached){
+		if(!playerattached()){
 			errormes "get_concurrent_uid : There's no RID attached to the function.";
 			return UID_NULL;
 		}
