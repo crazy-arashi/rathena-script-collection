@@ -326,7 +326,7 @@ function	script	concurrent_uid_registration	{
 	end;
 	
 OnInit:
-	cloakonnpcself;
+	cloakonnpc;
 end;
 }
 
