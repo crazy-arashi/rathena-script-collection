@@ -61,8 +61,16 @@ function	script	getnpc_arrindex	{
 }
 
 function	script	array_pop	{
-	set getelementofarray(getarg(0),getarraysize(getarg(0))),getarg(1);
-	return;
+	set getelementofarray(getarg(0),(.@size = getarraysize(getarg(0)))), getarg(1);
+	return .@size;
+}
+
+function	script	SprintVar	{
+	return getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$") : (getarg(0) + "_%d")), getarg(1)));
+}
+
+function	script	SprintIndex	{
+	return getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$[%d]") : (getarg(0) + "_%d[%d]")), getarg(1), getarg(2)));
 }
 
 /* Instance commands shorcuts
@@ -123,6 +131,20 @@ function	script	instance_event	{
 		doevent instance_npcname(getarg(0)) + "::" + getarg(1);
 	else
 		donpcevent instance_npcname(getarg(0)) + "::" + getarg(1);
+	return;
+}
+
+function	script	get_instance_var	{
+	return getd("'" + getarg(0));
+}
+
+function	script	set_instance_var	{
+	setd("'" + getarg(0),getarg(1));
+	return;
+}
+
+function	script	inc_instance_var	{
+	setd("'" + getarg(0), getd("'" + getarg(0)) + 1);
 	return;
 }
 
@@ -194,6 +216,7 @@ const values:
 UID_NULL = -1
 UID_NO_CONCURRENT = 0
 */
+
 function	script	concurrent_uid	{
 	if((.@c = getargcount()))
 		query_sql("SELECT `last_unique_id` FROM `login` WHERE `account_id` = '" + getarg(0) + "'", .@uid);
@@ -320,6 +343,7 @@ function	script	concurrent_uid_registration	{
 	}
 	return UID_SUCCESS;
 }
+
 
 //= DUMMY NPC's
 -	script	dummynpc	-1,{
