@@ -207,6 +207,19 @@ function	script	create_menu	{
 	return implode(getarg(0),":");
 }
 
+function	script	getday	{
+	switch(getarg(0)) {
+		case SUNDAY: .@d$ = "Sunday"; break;
+		case MONDAY: .@d$ = "Monday"; break;
+		case TUESDAY: .@d$ = "Tuesday"; break;
+		case WEDNESDAY: .@d$ = "Wednesday"; break;
+		case THURSDAY: .@d$ = "Thursday"; break;
+		case FRIDAY: .@d$ = "Friday"; break;
+		case SATURDAY: .@d$ = "Saturday"; break;
+	}
+	return .@d$;
+}
+
 /*
 GEPARD FUNCTION
 ** get_concurrent_uid({<ACCOUNT ID>});
