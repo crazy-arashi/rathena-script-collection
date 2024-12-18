@@ -60,17 +60,39 @@ function	script	getnpc_arrindex	{
 	return inarray(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarg(1));
 }
 
-function	script	array_pop	{
+function	script	array_push	{
 	set getelementofarray(getarg(0),(.@size = getarraysize(getarg(0)))), getarg(1);
 	return .@size;
 }
 
-function	script	SprintVar	{
-	return getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$") : (getarg(0) + "_%d")), getarg(1)));
+/* Functions for storing/fetching multiple array of data without using unreadable getd
+** SprintVar("<Base Array Variable>",<Value>{,<"NPC Name">};
+** SprintIndex"<Base Array Variable>",<Value>,<Index>{,<"NPC Name">};
+
+-- Use Cases
+set SprintVar(".var", 1), 20;
+Equivalent : .var_1 = 20;
+.@value = SprintVar(".var", 1); //Returns 20
+
+set SprintVar(".name$, 1), "Hello";
+Equivalent : .name_1$ = "Hello";
+.@value$ = SprintVar(".name$, 1); //Returns Hello
+
+//= Usage with array_push function
+array_push(SprintVar(".var", 1), 30);
+.@index_0 = SprintIndex(".var", 1, 0); //Returns 20
+.@index_1 = SprintIndex(".var", 1, 1); //Returns 30
+
+//= Usage with getarraysize
+.@size = getarraysize(SprintVar(".var", 1)); // Returns 2
+*/
+
+function    script    SprintVar    {
+    return getvariableofnpc(getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$") : (getarg(0) + "_%d")), getarg(1))), getarg(2,strnpcinfo(3)));
 }
 
-function	script	SprintIndex	{
-	return getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$[%d]") : (getarg(0) + "_%d[%d]")), getarg(1), getarg(2)));
+function    script    SprintIndex    {
+    return getvariableofnpc(getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$[%d]") : (getarg(0) + "_%d[%d]")), getarg(1), getarg(2))), getarg(3,strnpcinfo(3)));
 }
 
 /* Instance commands shorcuts
