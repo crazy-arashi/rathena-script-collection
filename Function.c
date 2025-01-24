@@ -87,11 +87,11 @@ array_push(SprintVar(".var", 1), 30);
 .@size = getarraysize(SprintVar(".var", 1)); // Returns 2
 */
 
-function    script    SprintVar    {
+function	script	SprintVar	{
     return getvariableofnpc(getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$") : (getarg(0) + "_%d")), getarg(1))), getarg(2,strnpcinfo(3)));
 }
 
-function    script    SprintIndex    {
+function	script	SprintIndex	{
     return getvariableofnpc(getd(sprintf((compare(getarg(0), "$") ? (delchar(getarg(0), getstrlen(getarg(0)) - 1) + "_%d$[%d]") : (getarg(0) + "_%d[%d]")), getarg(1), getarg(2))), getarg(3,strnpcinfo(3)));
 }
 
