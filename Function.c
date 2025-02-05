@@ -60,6 +60,10 @@ function	script	getnpc_arrindex	{
 	return inarray(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarg(1));
 }
 
+/* 
+** Push an element to the target array and returns the current array size.
+*/
+
 function	script	array_push	{
 	set getelementofarray(getarg(0),(.@size = getarraysize(getarg(0)))), getarg(1);
 	return .@size;
@@ -242,6 +246,36 @@ function	script	getday	{
 	return .@d$;
 }
 
+function	script	safe_rand	{
+	if ( !getargcount() ) 
+		return;
+	.@min = getarg(0);
+	
+	if ( getargcount() > 1 )
+		.@max = getarg(1);
+	else {
+		if ( .@min == 0 ) {
+			errormes "safe_rand : Random value can't be 0.";
+			end;
+		}
+		if ( .@min == 1 )
+			return 0;
+		else
+			return rand(.@min);
+	}
+	
+	if ( .@min == .@max )
+		return .@min;
+
+	if ( .@max < .@min ) {
+		.@temp = .@min;
+		.@min = .@max;
+		.@max = .@temp;
+	}
+	
+	return rand(.@min, .@max);
+}
+
 /*
 GEPARD FUNCTION
 ** get_concurrent_uid({<ACCOUNT ID>});
@@ -381,22 +415,10 @@ function	script	concurrent_uid_registration	{
 
 
 //= DUMMY NPC's
--	script	dummynpc	-1,{
+-	script(CLOAKED)	dummynpc	-1,{
 	end;
-	
-OnInit:
-	cloakonnpc;
-end;
 }
 
 -	script	dummynpc2	-1,{ 
 	end; 
-}
-
--	script	instancedummynpc	-1,{ 
-	end;
-	
-OnInstanceInit: 
-	instance_enable(strnpcinfo(0),false); 
-end; 
 }
