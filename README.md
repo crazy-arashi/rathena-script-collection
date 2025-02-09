@@ -1,6 +1,8 @@
 ## Crazyarashi rAthena Script Collection
 #### A collection of official and custom scripts for [rAthena](https://github.com/rathena/rathena "rAthena Github")
 #### Share it to your friends so they don't get scammed by resellers!
+#### If you're planning to use this for your server. Note that these are made several years ago and might have some mismatch from the function used and have minor bugs.
+#### Don't message or beg me about a simple problem on the script.
 
 ## How to Use
 - Clone/Download the repository.
