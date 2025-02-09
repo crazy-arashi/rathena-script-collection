@@ -1,41 +1,33 @@
-/* Function to change get a variable value from another NPC
-** getnpc_var("<Variable Name>",{,<NPC NAME>});
-
--- Use Cases
-.@value = getnpc_var("target_var","npc_name");
-.@value$ = getnpc_var("target_var$","npc_name");
-.@value$ = getnpc_var("target_var$[2]","npc_name");
-.@size = getarraysize(getnpcvar("target_array","npc_name"));
+//= Function for accessing npc variables from another NPC without using 'getvariableofnpc' and can have dynamic names
+//= Use Cases:
+/* 
+//===== getnpc_var("<Variable Name>",{,<Target NPC>});
+**
+** .@value = getnpc_var("target_var","npc_name");
+** .@value$ = getnpc_var("target_var$","npc_name");
+** .@value$ = getnpc_var("target_var$[2]","npc_name");
+** .@size = getarraysize(getnpcvar("target_array","npc_name"));
+**
+//===== setnpc_var("<Variable Name>",<New Value>,{,<Target NPC>});
+**
+** setnpc_var("target_var",10,"npc_name");
+** setnpc_var("target_var$","HELLO","npc_name");
+** setnpc_var("target_var$[2]","Change Array Value 2","npc_name");
+**
 */
 
 function	script	getnpc_var	{
 	return getvariableofnpc(getd((compare(getarg(0),".")?"":".") + getarg(0)),getarg(1,strnpcinfo(3)));
 }
 
-/* Function to change a variable/array from another NPC
-** setnpc_var("<Variable Name>",<New Value>,{,<NPC NAME>});
-
--- Use Cases
-setnpc_var("target_var",10,"npc_name");
-setnpc_var("target_var$","HELLO","npc_name");
-setnpc_var("target_var$[2]","Change Array Value 2","npc_name");
-*/
-
 function	script	setnpc_var	{
 	set getvariableofnpc(getd((compare(getarg(0),".")?"":".") + getarg(0)),getarg(2,strnpcinfo(3))),getarg(1);
 	return;
 }
 
-/* Function to copy an array from another NPC
-** getnpc_array("<Target Array Variable>",<Temporary Array Variable>{,<"NPC Name">});
-
--- Use Cases
-.@array_size = getnpc_array(".target_array",.@temp_array,"npc_name");
-
-- Target array data type should be the same
-- returns the array size
-*/
-
+//= Function for copying an array from another NPC and return the size of the copied array
+//= getnpc_array("<Target Array Variable>",<Copied Array Variable>{,<"Target NPC">});
+//= .@array_size = getnpc_array(".target_array",.@temp_array,"npc_name");
 function	script	getnpc_array	{
 	.@type$ = (compare(getarg(0),"$") ? "$" : "");
 	copyarray getd(".@temp_array" + .@type$ + "[0]"),getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarraysize(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))));
@@ -49,21 +41,14 @@ function	script	getnpc_array	{
 	return .@size;
 }
 
-/* Search the index of a value in from another NPC Variable
-** getnpc_arrindex("<Target Array Variable>",<Search Value>{,<"NPC Name">});
-
--- Use Cases
-.@index = getnpc_arrindex(".target_array",7,"npc_name");
-*/
-
+//= Basically inarray but for the target npc
+//= getnpc_arrindex("<Target Array Variable>",<Search Value>{,<"Target NPC">});
+//= .@array_size = getnpc_array(".target_array",.@temp_array,"npc_name");
 function	script	getnpc_arrindex	{
 	return inarray(getnpc_var(getarg(0),getarg(2,strnpcinfo(3))),getarg(1));
 }
 
-/* 
-** Push an element to the target array and returns the current array size.
-*/
-
+//= Push an element to the target array and returns the current array size.
 function	script	array_push	{
 	set getelementofarray(getarg(0),(.@size = getarraysize(getarg(0)))), getarg(1);
 	return .@size;
@@ -101,11 +86,10 @@ function	script	SprintIndex	{
 
 /* Instance commands shorcuts
 instance_warning(<TYPE>);
-instance_hide(<NPC Name>,<Bool>);
-instance_enable(<NPC Name>,<Bool>);
+instance_hide(<NPC Name>,<bool>);
+instance_enable(<NPC Name>,<bool>);
 instance_event(<NPC Name>,<Event Name>,<Attach Player Bool>);
 */
-
 function	script	instance_warning	{
 	.@type = (getargcount() < 1 ? 0 : getarg(0));
 	.@md_name$ = (getargcount() == 2 ? getarg(1,"") : "");
@@ -136,6 +120,7 @@ function	script	instance_warning	{
 	return;
 }
 
+//= Instance event control so I don't have to type instance_npcname and concatinate something every single time I have to do an event call.
 function	script	instance_hide	{
 	if(getarg(1))
 		hideonnpc instance_npcname(getarg(0));
@@ -160,6 +145,7 @@ function	script	instance_event	{
 	return;
 }
 
+//= Instance variable control because I hate how 'variables breaks my IDE.
 function	script	get_instance_var	{
 	return getd("'" + getarg(0));
 }
@@ -346,7 +332,7 @@ function	script	concurrent_uid_map	{
 		if(.@map$ == .@m$)
 			.@total++;
 	}
-	return (.@total == 1 ? UID_NO_CONCURRENT : .@total);
+	return (.@total == 0 ? UID_NO_CONCURRENT : .@total);
 }
 
 function	script	concurrent_uid_registration	{
