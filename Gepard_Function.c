@@ -30,7 +30,7 @@ function	script	concurrent_uid	{
 
 function	script	concurrent_uid_map	{
 	if(getargcount()){
-		.@aid = getarg(0);
+		.@map$ = getarg(0);
 		if(getargcount() > 1)
 			.@map$ = getarg(1);
 		else {
