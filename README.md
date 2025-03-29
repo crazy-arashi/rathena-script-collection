@@ -17,10 +17,16 @@
 
 # Contents
 ### Renewal Contents
-- Constellation Tower - Initial Release Version
 - Edda Somatology/Biolaboratory
 - Edda Fall of Glastheim
 - Old Glastheim Hard
 - Tomb of Remorse
 - Thanatos Tower Rework - Instance Only
 - Episode 19 Isgard - [Active Pull Request](https://github.com/rathena/rathena/pull/8527)
+
+### Unreleased Renewal Contents
+#### If you're looking for the following contents, find me in discord and message me.
+- Complete Constellation Tower - (1000% Betelguese)
+- Complete Episode 21 - Heroes Age (Jorscalp Update Included)
+- Complete Garden of Time
+- Chapter 1 - Call of the World Tree
