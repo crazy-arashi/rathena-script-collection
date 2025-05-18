@@ -27,6 +27,4 @@
 ### Unreleased Renewal Contents
 #### If you're looking for the following contents, find me in discord and message me.
 - Complete Constellation Tower - (1000% Betelguese)
-- Complete Episode 21 - Heroes Age (Jorscalp Update Included)
 - Complete Garden of Time
-- Chapter 1 - Call of the World Tree
